@@ -3,61 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Free Course Tracker</title>
+<title>Free Course Info — always updated</title>
 <style>
 :root{--bg:#0a0a0f;--fg:#e8e8ed;--muted:#6b6b7b;--acc:#00d4aa;--acc2:#ff6b6b;--card:#14141e;--border:#2a2a3e}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;min-height:100vh;padding:20px}
-.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;flex-wrap:wrap;gap:12px}
-h1{font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--acc),#00ffcc);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;min-height:100vh;padding:20px}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px}
+h1{font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,var(--acc),#00ffcc);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{font-size:0.72rem;color:var(--muted);font-weight:400}
 .controls{display:flex;gap:8px;flex-wrap:wrap}
-select,input,button{background:var(--card);border:1px solid var(--border);color:var(--fg);padding:8px 12px;border-radius:6px;font-size:0.875rem}
+select,input,button{background:var(--card);border:1px solid var(--border);color:var(--fg);padding:8px 12px;border-radius:6px;font-size:0.85rem}
 select:focus,input:focus{outline:none;border-color:var(--acc)}
-button{cursor:pointer;transition:all 0.15s}
+button{cursor:pointer;transition:all .15s}
 button.primary{background:var(--acc);color:#0a0a0f;border:none;font-weight:600}
-button.primary:hover{background:#00ffcc;transform:translateY(-1px)}
+button.primary:hover{background:#00ffcc}
 button.secondary{background:transparent;border-color:var(--acc);color:var(--acc)}
-button.secondary:hover{background:rgba(0,212,170,0.1)}
-button.danger{background:transparent;border-color:var(--acc2);color:var(--acc2)}
-.stats{display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px 16px;min-width:120px}
-.stat-label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em}
-.stat-value{font-size:1.25rem;font-weight:700;color:var(--acc)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;transition:all 0.2s;position:relative}
-.card:hover{border-color:var(--acc);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,212,170,0.1)}
-.card-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px}
-.card-title{font-weight:600;font-size:0.95rem}
+button.secondary:hover{background:rgba(0,212,170,.1)}
+.stats{display:flex;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.stat{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:10px 14px;min-width:104px}
+.stat-label{font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.stat-value{font-size:1.2rem;font-weight:700;color:var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;transition:all .2s}
+.card:hover{border-color:var(--acc);transform:translateY(-2px)}
+.card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
+.card-title{font-weight:600;font-size:0.93rem}
 .card-title a{color:var(--fg);text-decoration:none}
 .card-title a:hover{color:var(--acc)}
-.badge{font-size:0.65rem;padding:2px 8px;border-radius:999px;background:rgba(0,212,170,0.15);color:var(--acc);text-transform:uppercase}
-.card-desc{font-size:0.8rem;color:var(--muted);margin-bottom:12px;line-height:1.4}
-.card-meta{display:flex;gap:8px;font-size:0.7rem;color:var(--muted);margin-bottom:10px;flex-wrap:wrap}
+.badge{font-size:0.6rem;padding:2px 8px;border-radius:999px;background:rgba(0,212,170,.15);color:var(--acc);text-transform:uppercase;white-space:nowrap}
+.card-desc{font-size:0.78rem;color:var(--muted);margin-bottom:10px;line-height:1.4}
+.card-meta{display:flex;gap:6px;font-size:0.66rem;color:var(--muted);margin-bottom:10px;flex-wrap:wrap}
 .card-meta span{background:var(--bg);padding:3px 8px;border-radius:4px;border:1px solid var(--border)}
 .progress-bar{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:10px}
-.progress-fill{height:100%;background:linear-gradient(90deg,var(--acc),#00ffcc);border-radius:2px;transition:width 0.3s}
-.card-actions{display:flex;gap:8px;flex-wrap:wrap}
-.btn-sm{padding:6px 10px;font-size:0.75rem}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--acc),#00ffcc);transition:width .3s}
+.card-actions{display:flex;gap:6px;flex-wrap:wrap}
+.btn-sm{padding:5px 10px;font-size:0.72rem}
 .btn-sm.completed{background:var(--acc);color:#0a0a0f;border:none}
-.btn-sm.started{background:rgba(255,107,107,0.2);border-color:var(--acc2);color:var(--acc2)}
-.note-input{width:100%;margin-top:8px;padding:8px;font-size:0.75rem;background:var(--bg);border:1px solid var(--border);border-radius:4px;color:var(--fg);resize:none;min-height:50px}
-.note-input:focus{outline:none;border-color:var(--acc)}
-.empty{text-align:center;padding:40px;color:var(--muted)}
-.modal{position:fixed;inset:0;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;z-index:100;opacity:0;visibility:hidden;transition:all 0.2s}
+.btn-sm.started{background:rgba(255,107,107,.2);border-color:var(--acc2);color:var(--acc2)}
+.note-input{width:100%;margin-top:8px;padding:8px;font-size:0.74rem;background:var(--bg);border:1px solid var(--border);border-radius:4px;color:var(--fg);resize:vertical;min-height:52px}
+.empty{text-align:center;padding:40px;color:var(--muted);grid-column:1/-1}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:flex;align-items:center;justify-content:center;z-index:100;opacity:0;visibility:hidden;transition:all .2s}
 .modal.open{opacity:1;visibility:visible}
-.modal-content{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;max-width:500px;width:90%;max-height:80vh;overflow:auto;position:relative}
-.modal h3{margin-bottom:16px;color:var(--acc)}
-.close-btn{position:absolute;top:12px;right:12px;background:none;border:none;color:var(--muted);font-size:1.25rem;cursor:pointer}
-.toast{position:fixed;bottom:20px;right:20px;background:var(--card);border:1px solid var(--border);padding:12px 20px;border-radius:8px;z-index:200;transform:translateY(100px);opacity:0;transition:all 0.3s}
+.modal-content{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;max-width:640px;width:92%;max-height:82vh;overflow:auto;position:relative}
+.modal h3{margin-bottom:14px;color:var(--acc)}
+.close-btn{position:absolute;top:10px;right:14px;background:none;border:none;color:var(--muted);font-size:1.4rem;cursor:pointer;padding:0}
+.toast{position:fixed;bottom:20px;right:20px;background:var(--card);border:1px solid var(--border);padding:12px 20px;border-radius:8px;z-index:200;transform:translateY(120px);opacity:0;transition:all .3s}
 .toast.show{transform:translateY(0);opacity:1}
+table{width:100%;border-collapse:collapse;font-size:0.78rem}
+th,td{padding:8px;border-bottom:1px solid var(--border)}
+th{text-align:left;color:var(--muted);font-weight:600}
 @media(max-width:480px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="header">
-<h1>Free Course Tracker</h1>
+<div>
+<h1>Free Course Info</h1>
+<div class="sub" id="lastUpdated">loading...</div>
+</div>
 <div class="controls">
-<select id="categoryFilter"><option value="all">Semua Kategori</option</select>
+<select id="categoryFilter"><option value="all">Semua Kategori</option></select>
 <select id="difficultyFilter">
 <option value="all">Semua Level</option>
 <option value="beginner">Beginner</option>
@@ -67,176 +72,255 @@ button.danger{background:transparent;border-color:var(--acc2);color:var(--acc2)}
 </select>
 <select id="durationFilter">
 <option value="all">Semua Durasi</option>
-<option value="short">< 20 jam</option>
+<option value="short">under 20 jam</option>
 <option value="medium">20-100 jam</option>
-<option value="long">> 100 jam</option>
+<option value="long">100+ jam</option>
 </select>
-<select id="tagFilter"><option value="all">Semua Tag</option</select>
+<select id="tagFilter"><option value="all">Semua Tag</option></select>
+<select id="sourceFilter"><option value="all">Semua Sumber</option></select>
 <input type="text" id="searchInput" placeholder="Cari kursus...">
-<button class="primary" onclick="exportData()">Export JSON</button>
-<button class="secondary" onclick="importData()">Import</button>
+<button class="primary" onclick="exportData()">Export</button>
+<button class="secondary" onclick="openModal('importModal')">Import</button>
 <button class="secondary" onclick="openModal('statsModal')">Stats</button>
 </div>
 </div>
+
 <div class="stats">
-<div class="stat"><div class="stat-label">Total</div><div class="stat-value" id="statTotal">0</div</div>
-<div class="stat"><div class="stat-label">Started</div><div class="stat-value" id="statStarted">0</div</div>
-<div class="stat"><div class="stat-label">Completed</div><div class="stat-value" id="statCompleted">0</div</div>
-<div class="stat"><div class="stat-label">Hours</div><div class="stat-value" id="statHours">0</div</div>
+<div class="stat"><div class="stat-label">Total</div><div class="stat-value" id="statTotal">0</div></div>
+<div class="stat"><div class="stat-label">Tampil</div><div class="stat-value" id="statShown">0</div></div>
+<div class="stat"><div class="stat-label">Started</div><div class="stat-value" id="statStarted">0</div></div>
+<div class="stat"><div class="stat-label">Completed</div><div class="stat-value" id="statCompleted">0</div></div>
+<div class="stat"><div class="stat-label">Jam</div><div class="stat-value" id="statHours">0</div></div>
 </div>
-<div class="grid" id="courseGrid</div>
+
+<div class="grid" id="courseGrid"></div>
 
 <div class="modal" id="statsModal">
 <div class="modal-content">
-<span class="close-btn" onclick="closeModal('statsModal')">&times</span>
-<h3>Detail Statistik</h3>
-<div id="statsDetail</div>
+<button class="close-btn" onclick="closeModal('statsModal')">x</button>
+<h3>Progress Detail</h3>
+<div id="statsDetail"></div>
 </div>
 </div>
+
 <div class="modal" id="importModal">
 <div class="modal-content">
-<span class="close-btn" onclick="closeModal('importModal')">&times</span>
-<h3>Import Data</h3>
-<textarea class="note-input" id="importText" placeholder="Paste JSON di sini..."</textarea>
+<button class="close-btn" onclick="closeModal('importModal')">x</button>
+<h3>Import Progress</h3>
+<textarea class="note-input" id="importText" placeholder="Paste JSON hasil Export..."></textarea>
 <div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
 <button class="primary" onclick="doImport()">Import</button>
 <button class="secondary" onclick="closeModal('importModal')">Batal</button>
 </div>
 </div>
 </div>
-<div class="toast" id="toast</div>
+
+<div class="toast" id="toast"></div>
 
 <script>
-const COURSES = [
-{id:"coursera",name:"Coursera (Audit)",url:"https://coursera.org",cat:"University",difficulty:"mixed",duration:40,desc:"University courses from top schools. Audit free, certificates paid.",tags:["CS","Business","Data","Health"]},
-{id:"edx",name:"edX (Audit)",url:"https://edx.org",cat:"University",difficulty:"mixed",duration:40,desc:"Harvard, MIT, Berkeley courses. Verified track paid.",tags:["CS","Engineering","Humanities"]},
-{id:"khan",name:"Khan Academy",url:"https://khanacademy.org",cat:"Foundation",difficulty:"beginner",duration:200,desc:"K-12 math, science, computing. 100% free forever.",tags:["Math","CS Basics","Science"]},
-{id:"fcc",name:"freeCodeCamp",url:"https://freecodecamp.org",cat:"Web Dev",difficulty:"beginner",duration:300,desc:"Full cert paths: Responsive Web, JS, Python, Data Sci, ML. 100% free.",tags:["HTML/CSS","JS","Python","Data","ML"]},
-{id:"mitocw",name:"MIT OpenCourseWare",url:"https://ocw.mit.edu",cat:"University",difficulty:"advanced",duration:120,desc:"Complete MIT syllabi: lectures, notes, exams, solutions.",tags:["CS","Math","Physics","Engineering"]},
-{id:"cs50",name:"Harvard CS50",url:"https://cs50.harvard.edu",cat:"Foundation",difficulty:"beginner",duration:50,desc:"Legendary intro CS: C, Python, SQL, Web, algorithms. Free on edX/YouTube.",tags:["CS Fundamentals","Systems","Algo"]},
-{id:"gcloud",name:"Google Cloud Skills Boost",url:"https://cloudskillsboost.google",cat:"Cloud",difficulty:"intermediate",duration:60,desc:"GCP, AI, Data, Infra labs. Free tier + credits.",tags:["GCP","AI","Data","K8s"]},
-{id:"mslearn",name:"Microsoft Learn",url:"https://learn.microsoft.com",cat:"Cloud",difficulty:"mixed",duration:80,desc:"Azure, .NET, AI, GitHub, Power Platform. Free interactive modules.",tags:["Azure","C#","AI","GitHub"]},
-{id:"aws",name:"AWS Skill Builder",url:"https://skillbuilder.aws",cat:"Cloud",difficulty:"mixed",duration:100,desc:"Cloud Practitioner → Pro/Specialty certs prep. Free digital training.",tags:["AWS","Cloud","Architecture"]},
-{id:"odin",name:"The Odin Project",url:"https://theodinproject.com",cat:"Web Dev",difficulty:"intermediate",duration:400,desc:"Full-stack curriculum: Ruby/Rails or JS/Node. Project-based.",tags:["Ruby","Rails","JS","Node","React"]},
-{id:"codecademy",name:"Codecademy (Free)",url:"https://codecademy.com/catalog/subject/all?free=true",cat:"Interactive",difficulty:"beginner",duration:30,desc:"Interactive coding basics. Pro locked but free tier solid.",tags:["Python","JS","SQL","HTML/CSS"]},
-{id:"mdn",name:"MDN Web Docs",url:"https://developer.mozilla.org",cat:"Reference",difficulty:"mixed",duration:50,desc:"Web standards authority. Tutorials + complete reference.",tags:["HTML","CSS","JS","Web APIs"]},
-{id:"fastai",name:"Fast.ai",url:"https://course.fast.ai",cat:"AI/ML",difficulty:"intermediate",duration:60,desc:"Practical deep learning for coders. Top-down, code-first.",tags:["PyTorch","CV","NLP","Tabular"]},
-{id:"deeplearning",name:"DeepLearning.AI (Audit)",url:"https://deeplearning.ai/courses",cat:"AI/ML",difficulty:"intermediate",duration:90,desc:"Andrew Ng ML/DL specializations. Audit free on Coursera.",tags:["ML","DL","Transformers","MLOps"]},
-{id:"hf",name:"Hugging Face Course",url:"https://huggingface.co/learn",cat:"AI/ML",difficulty:"intermediate",duration:40,desc:"Transformers, NLP, Diffusion, RL. Hands-on with HF ecosystem.",tags:["Transformers","NLP","Diffusion"]},
-{id:"classcentral",name:"Class Central",url:"https://classcentral.com",cat:"Aggregator",difficulty:"mixed",duration:10,desc:"Search/review aggregator for all MOOCs. Track new free courses.",tags:["Discovery","Reviews"]},
-{id:"openlearn",name:"OpenLearn (OU)",url:"https://open.edu/openlearn",cat:"Short Courses",difficulty:"beginner",duration:20,desc:"Open University UK. Short courses, digital badges, free.",tags:["Varied","Badges"]},
-{id:"youtube",name:"YouTube Channels",url:"https://youtube.com",cat:"Video",difficulty:"mixed",duration:9999,desc:"Corey Schafer, Fireship, Traversy, NetworkChuck, TechWorld with Nana.",tags:["All topics"]}
-];
-
+let COURSES = [];
 let progress = JSON.parse(localStorage.getItem('courseProgress') || '{}');
 
-function save(){localStorage.setItem('courseProgress',JSON.stringify(progress));render();updateStats();}
-function getState(id){return progress[id]||{status:'none',hours:0,notes:'',started:null,completed:null};}
-function setState(id,state){progress[id]=Object.assign({},getState(id),state);save();}
-function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2000);}
+// escape via DOM, no entity literals needed
+function esc(s){ const d = document.createElement('div'); d.textContent = (s == null ? '' : String(s)); return d.innerHTML; }
 
-function render(){
-const grid=document.getElementById('courseGrid');
-const cat=document.getElementById('categoryFilter').value;
-const diff=document.getElementById('difficultyFilter').value;
-const dur=document.getElementById('durationFilter').value;
-const tag=document.getElementById('tagFilter').value;
-const q=document.getElementById('searchInput').value.toLowerCase();
-const cats=new Set();
-grid.innerHTML='';
-COURSES.forEach(function(c){
-cats.add(c.cat);
-if(cat!=='all'&&c.cat!==cat)return;
-if(diff!=='all'&&c.difficulty!==diff)return;
-const d=c.duration||0;
-if(dur==='short'&&!(d>0&&d<20))return;
-if(dur==='medium'&&!(d>=20&&d<=100))return;
-if(dur==='long'&&!(d>100))return;
-if(tag!=='all'&&!c.tags.includes(tag))return;
-const hay=(c.name+' '+c.desc+' '+c.tags.join(' ')).toLowerCase();
-if(q&&hay.indexOf(q)===-1)return;
-const s=getState(c.id);
-const pct=s.status==='completed'?100:s.status==='started'?50:0;
-const durTxt=c.duration>=9999?'∞':c.duration+'h';
-const card=document.createElement('div');
-card.className='card';
-card.innerHTML='<div class="card-header"><h3 class="card-title"><a href="'+c.url+'" target="_blank" rel="noopener">'+c.name+'</a</h3><span class="badge">'+c.cat+'</span</div>'+
-'<p class="card-desc">'+c.desc+'</p>'+
-'<div class="card-meta"><span>Level: '+c.difficulty+'</span><span>Est: '+durTxt+'</span</div>'+
-'<div class="progress-bar"><div class="progress-fill" style="width:'+pct+'%</div</div>'+
-'<div class="card-actions">'+
-'<button class="btn-sm '+(s.status==='completed'?'completed':'')+'" onclick="toggleStatus(\''+c.id+'\',\''+(s.status==='completed'?'none':'completed')+'\')">'+(s.status==='completed'?'Done':'Selesai')+'</button>'+
-'<button class="btn-sm '+(s.status==='started'?'started':'')+'" onclick="toggleStatus(\''+c.id+'\',\''+(s.status==='started'?'none':'started')+'\')">'+(s.status==='started'?'Started':'Mulai')+'</button>'+
-'<button class="btn-sm secondary" onclick="addHours(\''+c.id+'\')">+1 Jam</button>'+
-'<button class="btn-sm secondary" onclick="editNotes(\''+c.id+'\')">Catatan</button>'+
-</div>'+
-(s.notes?'<textarea class="note-input" readonly>'+s.notes+'</textarea>':'');
-grid.appendChild(card);
-});
-const filter=document.getElementById('categoryFilter');
-Array.from(cats).sort().forEach(function(c){if(!Array.from(filter.options).some(function(o){return o.value===c;})){filter.add(new Option(c,c));}});
-const tagFilter=document.getElementById('tagFilter');
-const allTags=[];
-COURSES.forEach(function(c){c.tags.forEach(function(t){if(allTags.indexOf(t)===-1)allTags.push(t);});});
-allTags.sort().forEach(function(t){if(!Array.from(tagFilter.options).some(function(o){return o.value===t;}))tagFilter.add(new Option(t,t));});
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 1800);
 }
 
-function toggleStatus(id,status){
-const s=getState(id);
-const now=new Date().toISOString();
-if(status==='completed'){setState(id,{status:'completed',completed:now,started:s.started||now});toast('Completed');}
-else if(status==='started'){setState(id,{status:'started',started:s.started||now});toast('Started');}
-else{setState(id,{status:'none'});toast('Reset');}
+function getState(id){ return progress[id] || { status:'none', hours:0, notes:'', started:null, completed:null }; }
+function setState(id, patch){ progress[id] = Object.assign({}, getState(id), patch); saveProgress(); }
+function saveProgress(){ localStorage.setItem('courseProgress', JSON.stringify(progress)); render(); }
+
+async function loadCourses(){
+  try {
+    const res = await fetch('courses.json?v=' + Date.now());
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    COURSES = data.courses || [];
+    const when = data.updated_at ? new Date(data.updated_at).toLocaleString() : 'unknown';
+    document.getElementById('lastUpdated').textContent =
+      COURSES.length + ' entri - ' + (data.curated || 0) + ' platform pilihan + ' + (data.from_feeds || 0) + ' dari feed - update ' + when;
+    initFilters();
+    render();
+  } catch (err) {
+    console.error(err);
+    document.getElementById('courseGrid').innerHTML = '<div class="empty">Gagal memuat courses.json (' + esc(err.message) + ')</div>';
+    document.getElementById('lastUpdated').textContent = 'gagal memuat data';
+  }
+}
+
+function initFilters(){
+  const cats = new Set(), tags = new Set(), srcs = new Set();
+  COURSES.forEach(function(c){
+    if (c.cat) cats.add(c.cat);
+    (c.tags || []).forEach(function(t){ tags.add(t); });
+    if (c.source) srcs.add(c.source);
+  });
+  fill('categoryFilter', cats);
+  fill('tagFilter', tags);
+  fill('sourceFilter', srcs);
+}
+
+function fill(id, set){
+  const el = document.getElementById(id);
+  Array.from(set).sort().forEach(function(v){ el.add(new Option(v, v)); });
+}
+
+function render(){
+  const grid = document.getElementById('courseGrid');
+  const cat = document.getElementById('categoryFilter').value;
+  const diff = document.getElementById('difficultyFilter').value;
+  const dur = document.getElementById('durationFilter').value;
+  const tag = document.getElementById('tagFilter').value;
+  const src = document.getElementById('sourceFilter').value;
+  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+
+  const parts = [];
+  let shown = 0;
+
+  COURSES.forEach(function(c){
+    if (cat !== 'all' && c.cat !== cat) return;
+    if (diff !== 'all' && c.difficulty !== diff) return;
+    if (src !== 'all' && c.source !== src) return;
+    const d = c.duration || 0;
+    if (dur === 'short' && !(d > 0 && d < 20)) return;
+    if (dur === 'medium' && !(d >= 20 && d <= 100)) return;
+    if (dur === 'long' && !(d > 100)) return;
+    if (tag !== 'all' && !(c.tags || []).includes(tag)) return;
+    if (q) {
+      const hay = (c.name + ' ' + (c.desc || '') + ' ' + (c.tags || []).join(' ')).toLowerCase();
+      if (hay.indexOf(q) === -1) return;
+    }
+
+    const s = getState(c.id);
+    const pct = s.status === 'completed' ? 100 : s.status === 'started' ? 50 : 0;
+    const durTxt = (c.duration >= 9999) ? 'ongoing' : (c.duration || '?') + 'h';
+    const doneLabel = s.status === 'completed' ? 'Done' : 'Selesai';
+    const startLabel = s.status === 'started' ? 'Started' : 'Mulai';
+    const nextDone = s.status === 'completed' ? 'none' : 'completed';
+    const nextStart = s.status === 'started' ? 'none' : 'started';
+
+    parts.push(
+      '<div class="card">' +
+        '<div class="card-header">' +
+          '<h3 class="card-title"><a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.name) + '</a></h3>' +
+          '<span class="badge">' + esc(c.cat) + '</span>' +
+        '</div>' +
+        '<p class="card-desc">' + esc(c.desc || '') + '</p>' +
+        '<div class="card-meta">' +
+          '<span>' + esc(c.difficulty || 'mixed') + '</span>' +
+          '<span>' + durTxt + '</span>' +
+          (c.source ? '<span>' + esc(c.source) + '</span>' : '') +
+        '</div>' +
+        '<div class="progress-bar"><div class="progress-fill" style="width:' + pct + '%"></div></div>' +
+        '<div class="card-actions">' +
+          '<button class="btn-sm ' + (s.status === 'completed' ? 'completed' : '') + '" onclick="toggleStatus(\'' + c.id + '\',\'' + nextDone + '\')">' + doneLabel + '</button>' +
+          '<button class="btn-sm ' + (s.status === 'started' ? 'started' : '') + '" onclick="toggleStatus(\'' + c.id + '\',\'' + nextStart + '\')">' + startLabel + '</button>' +
+          '<button class="btn-sm secondary" onclick="addHours(\'' + c.id + '\')">+1 Jam</button>' +
+          '<button class="btn-sm secondary" onclick="editNotes(\'' + c.id + '\')">Catatan</button>' +
+        '</div>' +
+        (s.notes ? '<textarea class="note-input" readonly>' + esc(s.notes) + '</textarea>' : '') +
+      '</div>'
+    );
+    shown++;
+  });
+
+  grid.innerHTML = shown ? parts.join('') : '<div class="empty">Tidak ada yang cocok dengan filter</div>';
+  updateStats(shown);
+}
+
+function toggleStatus(id, status){
+  const s = getState(id);
+  const now = new Date().toISOString();
+  if (status === 'completed') { setState(id, { status:'completed', completed:now, started:s.started || now }); toast('Completed'); }
+  else if (status === 'started') { setState(id, { status:'started', started:s.started || now }); toast('Started'); }
+  else { setState(id, { status:'none' }); toast('Reset'); }
 }
 
 function addHours(id){
-const s=getState(id);
-setState(id,{hours:s.hours+1,status:s.status==='none'?'started':s.status,started:s.started||new Date().toISOString()});
-toast('+1 jam');
+  const s = getState(id);
+  setState(id, { hours:(s.hours || 0) + 1, status: s.status === 'none' ? 'started' : s.status, started: s.started || new Date().toISOString() });
+  toast('+1 jam');
 }
 
 function editNotes(id){
-const s=getState(id);
-const note=prompt('Catatan untuk '+COURSES.find(function(c){return c.id===id;}).name+':',s.notes||'');
-if(note!==null){setState(id,{notes:note,status:s.status==='none'?'started':s.status,started:s.started||new Date().toISOString()});toast('Catatan disimpan');}
+  const s = getState(id);
+  const c = COURSES.find(function(x){ return x.id === id; });
+  const note = prompt('Catatan untuk ' + (c ? c.name : id), s.notes || '');
+  if (note !== null) {
+    setState(id, { notes:note, status: s.status === 'none' ? 'started' : s.status, started: s.started || new Date().toISOString() });
+    toast('Catatan disimpan');
+  }
 }
 
-function updateStats(){
-let total=COURSES.length,started=0,completed=0,hours=0;
-Object.values(progress).forEach(function(s){if(s.status==='started')started++;if(s.status==='completed')completed++;hours+=s.hours||0;});
-document.getElementById('statTotal').textContent=total;
-document.getElementById('statStarted').textContent=started;
-document.getElementById('statCompleted').textContent=completed;
-document.getElementById('statHours').textContent=hours;
+function updateStats(shown){
+  let started = 0, completed = 0, hours = 0;
+  Object.values(progress).forEach(function(s){
+    if (s.status === 'started') started++;
+    if (s.status === 'completed') completed++;
+    hours += s.hours || 0;
+  });
+  document.getElementById('statTotal').textContent = COURSES.length;
+  document.getElementById('statShown').textContent = (shown === undefined ? COURSES.length : shown);
+  document.getElementById('statStarted').textContent = started;
+  document.getElementById('statCompleted').textContent = completed;
+  document.getElementById('statHours').textContent = hours;
 }
 
-function openModal(id){document.getElementById(id).classList.add('open');if(id==='statsModal')renderStats();}
-function closeModal(id){document.getElementById(id).classList.remove('open');}
+function openModal(id){ document.getElementById(id).classList.add('open'); if (id === 'statsModal') renderStats(); }
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
 
 function renderStats(){
-const detail=document.getElementById('statsDetail');
-let html='<table style="width:100%;border-collapse:collapse;font-size:0.8rem">';
-html+='<tr style="border-bottom:1px solid var(--border)"><th style="text-align:left;padding:8px">Course</th><th style="text-align:center;padding:8px">Status</th><th style="text-align:center;padding:8px">Hours</th><th style="text-align:center;padding:8px">Started</th><th style="text-align:center;padding:8px">Completed</th</tr>';
-COURSES.forEach(function(c){
-const s=getState(c.id);
-if(s.status==='none'&&!s.notes)return;
-html+='<tr style="border-bottom:1px solid var(--border)"><td style="padding:8px">'+c.name+'</td><td style="text-align:center;padding:8px">'+s.status+'</td><td style="text-align:center;padding:8px">'+(s.hours||0)+</td><td style="text-align:center;padding:8px">'+(s.started?new Date(s.started).toLocaleDateString():'-')+'</td><td style="text-align:center;padding:8px">'+(s.completed?new Date(s.completed).toLocaleDateString():'-')+'</td</tr>';
-});
-html+='</table>';
-detail.innerHTML=html||'<p style="color:var(--muted);text-align:center">Belum ada progress</p>';
+  const rows = [];
+  COURSES.forEach(function(c){
+    const s = getState(c.id);
+    if (s.status === 'none' && !s.notes) return;
+    rows.push(
+      '<tr>' +
+        '<td>' + esc(c.name) + '</td>' +
+        '<td>' + esc(s.status) + '</td>' +
+        '<td>' + (s.hours || 0) + '</td>' +
+        '<td>' + (s.started ? new Date(s.started).toLocaleDateString() : '-') + '</td>' +
+        '<td>' + (s.completed ? new Date(s.completed).toLocaleDateString() : '-') + '</td>' +
+      '</tr>'
+    );
+  });
+  document.getElementById('statsDetail').innerHTML = rows.length
+    ? '<table><tr><th>Course</th><th>Status</th><th>Jam</th><th>Mulai</th><th>Selesai</th></tr>' + rows.join('') + '</table>'
+    : '<p style="color:var(--muted);text-align:center">Belum ada progress</p>';
 }
 
-function exportData(){const blob=new Blob([JSON.stringify(progress,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='course-progress-'+new Date().toISOString().split('T')[0]+'.json';a.click();toast('Exported');}
-function importData(){openModal('importModal');}
-function doImport(){try{var v=document.getElementById('importText').value;progress=v?JSON.parse(v):{};save();closeModal('importModal');toast('Imported');}catch(e){toast('Invalid JSON');}}
+function exportData(){
+  const blob = new Blob([JSON.stringify(progress, null, 2)], { type:'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'course-progress-' + new Date().toISOString().split('T')[0] + '.json';
+  a.click();
+  toast('Exported');
+}
 
-document.getElementById('categoryFilter').addEventListener('change',render);
-document.getElementById('difficultyFilter').addEventListener('change',render);
-document.getElementById('durationFilter').addEventListener('change',render);
-document.getElementById('tagFilter').addEventListener('change',render);
-document.getElementById('searchInput').addEventListener('input',render);
-render();
-updateStats();
+function doImport(){
+  try {
+    const v = document.getElementById('importText').value.trim();
+    progress = v ? JSON.parse(v) : {};
+    saveProgress();
+    closeModal('importModal');
+    toast('Imported');
+  } catch (e) {
+    toast('JSON tidak valid');
+  }
+}
+
+['categoryFilter','difficultyFilter','durationFilter','tagFilter','sourceFilter'].forEach(function(id){
+  document.getElementById(id).addEventListener('change', render);
+});
+document.getElementById('searchInput').addEventListener('input', render);
+
+loadCourses();
 </script>
 </body>
 </html>

@@ -1,0 +1,2360 @@
+{
+ "updated_at": "2026-08-31T10:04:53+00:00",
+ "total": 158,
+ "curated": 18,
+ "from_feeds": 140,
+ "courses": [
+  {
+   "id": "deeplearning",
+   "name": "DeepLearning.AI (Audit)",
+   "url": "https://deeplearning.ai/courses",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 90,
+   "desc": "Andrew Ng ML/DL specializations. Audit free on Coursera.",
+   "tags": [
+    "ML",
+    "DL",
+    "Transformers",
+    "MLOps"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "fastai",
+   "name": "Fast.ai",
+   "url": "https://course.fast.ai",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 60,
+   "desc": "Practical deep learning for coders. Top-down, code-first.",
+   "tags": [
+    "PyTorch",
+    "CV",
+    "NLP",
+    "Tabular"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "hf",
+   "name": "Hugging Face Course",
+   "url": "https://huggingface.co/learn",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Transformers, NLP, Diffusion, RL. Hands-on with HF ecosystem.",
+   "tags": [
+    "Transformers",
+    "NLP",
+    "Diffusion"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "classcentral",
+   "name": "Class Central",
+   "url": "https://classcentral.com",
+   "cat": "Aggregator",
+   "difficulty": "mixed",
+   "duration": 10,
+   "desc": "Search/review aggregator for all MOOCs. Track new free courses.",
+   "tags": [
+    "Discovery",
+    "Reviews"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "aws",
+   "name": "AWS Skill Builder",
+   "url": "https://skillbuilder.aws",
+   "cat": "Cloud",
+   "difficulty": "mixed",
+   "duration": 100,
+   "desc": "Cloud Practitioner to Pro/Specialty cert prep. Free digital training.",
+   "tags": [
+    "AWS",
+    "Cloud",
+    "Architecture"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "gcloud",
+   "name": "Google Cloud Skills Boost",
+   "url": "https://cloudskillsboost.google",
+   "cat": "Cloud",
+   "difficulty": "intermediate",
+   "duration": 60,
+   "desc": "GCP, AI, Data, Infra labs. Free tier + credits.",
+   "tags": [
+    "GCP",
+    "AI",
+    "Data",
+    "K8s"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "mslearn",
+   "name": "Microsoft Learn",
+   "url": "https://learn.microsoft.com/training/",
+   "cat": "Cloud",
+   "difficulty": "mixed",
+   "duration": 80,
+   "desc": "Azure, .NET, AI, GitHub, Power Platform. Free interactive modules.",
+   "tags": [
+    "Azure",
+    "C#",
+    "AI",
+    "GitHub"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "cs50",
+   "name": "Harvard CS50",
+   "url": "https://cs50.harvard.edu",
+   "cat": "Foundation",
+   "difficulty": "beginner",
+   "duration": 50,
+   "desc": "Intro CS: C, Python, SQL, Web, algorithms. Free on edX/YouTube.",
+   "tags": [
+    "CS Fundamentals",
+    "Systems",
+    "Algo"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "khan",
+   "name": "Khan Academy",
+   "url": "https://khanacademy.org",
+   "cat": "Foundation",
+   "difficulty": "beginner",
+   "duration": 200,
+   "desc": "K-12 math, science, computing. 100% free forever.",
+   "tags": [
+    "Math",
+    "CS Basics",
+    "Science"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "codecademy",
+   "name": "Codecademy (Free)",
+   "url": "https://codecademy.com/catalog/subject/all?free=true",
+   "cat": "Interactive",
+   "difficulty": "beginner",
+   "duration": 30,
+   "desc": "Interactive coding basics. Pro locked but free tier solid.",
+   "tags": [
+    "Python",
+    "JS",
+    "SQL",
+    "HTML/CSS"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "mdn",
+   "name": "MDN Web Docs",
+   "url": "https://developer.mozilla.org",
+   "cat": "Reference",
+   "difficulty": "mixed",
+   "duration": 50,
+   "desc": "Web standards authority. Tutorials plus complete reference.",
+   "tags": [
+    "HTML",
+    "CSS",
+    "JS",
+    "Web APIs"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "openlearn",
+   "name": "OpenLearn (OU)",
+   "url": "https://open.edu/openlearn",
+   "cat": "Short Courses",
+   "difficulty": "beginner",
+   "duration": 20,
+   "desc": "Open University UK. Short courses, digital badges, free.",
+   "tags": [
+    "Varied",
+    "Badges"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "coursera",
+   "name": "Coursera (Audit)",
+   "url": "https://coursera.org",
+   "cat": "University",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "University courses from top schools. Audit free, certificates paid.",
+   "tags": [
+    "CS",
+    "Business",
+    "Data",
+    "Health"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "mitocw",
+   "name": "MIT OpenCourseWare",
+   "url": "https://ocw.mit.edu",
+   "cat": "University",
+   "difficulty": "advanced",
+   "duration": 120,
+   "desc": "Complete MIT syllabi: lectures, notes, exams, solutions.",
+   "tags": [
+    "CS",
+    "Math",
+    "Physics",
+    "Engineering"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "edx",
+   "name": "edX (Audit)",
+   "url": "https://edx.org",
+   "cat": "University",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Harvard, MIT, Berkeley courses. Verified track paid.",
+   "tags": [
+    "CS",
+    "Engineering",
+    "Humanities"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "youtube",
+   "name": "YouTube Channels",
+   "url": "https://youtube.com",
+   "cat": "Video",
+   "difficulty": "mixed",
+   "duration": 9999,
+   "desc": "Corey Schafer, Fireship, Traversy, NetworkChuck, TechWorld with Nana.",
+   "tags": [
+    "All topics"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "odin",
+   "name": "The Odin Project",
+   "url": "https://theodinproject.com",
+   "cat": "Web Dev",
+   "difficulty": "intermediate",
+   "duration": 400,
+   "desc": "Full-stack curriculum: Ruby/Rails or JS/Node. Project-based.",
+   "tags": [
+    "Ruby",
+    "Rails",
+    "JS",
+    "Node",
+    "React"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "fcc",
+   "name": "freeCodeCamp",
+   "url": "https://freecodecamp.org",
+   "cat": "Web Dev",
+   "difficulty": "beginner",
+   "duration": 300,
+   "desc": "Full cert paths: Responsive Web, JS, Python, Data Sci, ML. 100% free.",
+   "tags": [
+    "HTML/CSS",
+    "JS",
+    "Python",
+    "Data",
+    "ML"
+   ],
+   "source": "Curated"
+  },
+  {
+   "id": "98ef22b03a97",
+   "name": "A Complete Guide to Audio Datasets",
+   "url": "https://huggingface.co/blog/audio-datasets",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 60,
+   "desc": "A Complete Guide to Audio Datasets",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "f54896098dca",
+   "name": "A Gentle Introduction to 8-bit Matrix Multiplication for transformers at scale using transformers, accelerate ",
+   "url": "https://huggingface.co/blog/hf-bitsandbytes-integration",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "A Gentle Introduction to 8-bit Matrix Multiplication for transformers at scale using transformers, accelerate and bitsandbytes",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "fb74eddcbc28",
+   "name": "A guide to setting up your own Hugging Face leaderboard: an end-to-end example with Vectara's hallucination le",
+   "url": "https://huggingface.co/blog/leaderboard-vectara",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "A guide to setting up your own Hugging Face leaderboard: an end-to-end example with Vectara's hallucination leaderboard",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "42eecde847e4",
+   "name": "Accelerate Large Model Training using DeepSpeed",
+   "url": "https://huggingface.co/blog/accelerate-deepspeed",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Accelerate Large Model Training using DeepSpeed",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "607a8c22f76f",
+   "name": "Accelerate Large Model Training using PyTorch Fully Sharded Data Parallel",
+   "url": "https://huggingface.co/blog/pytorch-fsdp",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 60,
+   "desc": "Accelerate Large Model Training using PyTorch Fully Sharded Data Parallel",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "992015476559",
+   "name": "Accelerate ND-Parallel: A guide to Efficient Multi-GPU Training",
+   "url": "https://huggingface.co/blog/accelerate-nd-parallel",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Accelerate ND-Parallel: A guide to Efficient Multi-GPU Training",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "c70dbbdd06c3",
+   "name": "Active Learning with AutoNLP and Prodigy",
+   "url": "https://huggingface.co/blog/autonlp-prodigy",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Active Learning with AutoNLP and Prodigy",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "f0da78bb027b",
+   "name": "An Introduction to AI Secure LLM Safety Leaderboard",
+   "url": "https://huggingface.co/blog/leaderboard-decodingtrust",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "An Introduction to AI Secure LLM Safety Leaderboard",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "68be0dd5d9fc",
+   "name": "An Introduction to Deep Reinforcement Learning",
+   "url": "https://huggingface.co/blog/deep-rl-intro",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "An Introduction to Deep Reinforcement Learning",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "78d0e1890755",
+   "name": "An Introduction to Q-Learning Part 1",
+   "url": "https://huggingface.co/blog/deep-rl-q-part1",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "An Introduction to Q-Learning Part 1",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "e50e1b78df27",
+   "name": "An Introduction to Q-Learning Part 2/2",
+   "url": "https://huggingface.co/blog/deep-rl-q-part2",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "An Introduction to Q-Learning Part 2/2",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "9e01bee813a1",
+   "name": "Announcing NeurIPS 2025 E2LM Competition: Early Training Evaluation of Language Models",
+   "url": "https://huggingface.co/blog/tiiuae/e2lm-competition",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Announcing NeurIPS 2025 E2LM Competition: Early Training Evaluation of Language Models",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "3c70ac83a0e2",
+   "name": "Announcing our new Content Guidelines and Policy",
+   "url": "https://huggingface.co/blog/content-guidelines-update",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Announcing our new Content Guidelines and Policy",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "3bee7290591a",
+   "name": "Building Blocks for Foundation Model Training and Inference on AWS",
+   "url": "https://huggingface.co/blog/amazon/foundation-model-building-blocks",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Building Blocks for Foundation Model Training and Inference on AWS",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "440f7bf8bfdb",
+   "name": "Code Llama: Llama 2 learns to code",
+   "url": "https://huggingface.co/blog/codellama",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Code Llama: Llama 2 learns to code",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "78824c189d03",
+   "name": "Cosmopedia: how to create large-scale synthetic data for pre-training Large Language Models",
+   "url": "https://huggingface.co/blog/cosmopedia",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Cosmopedia: how to create large-scale synthetic data for pre-training Large Language Models",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "7222ad52a2e4",
+   "name": "Course Launch Community Event",
+   "url": "https://huggingface.co/blog/course-launch-event",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Course Launch Community Event",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "696fab5cab93",
+   "name": "Databricks ❤️ Hugging Face: up to 40% faster training and tuning of Large Language Models",
+   "url": "https://huggingface.co/blog/databricks-case-study",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Databricks ❤️ Hugging Face: up to 40% faster training and tuning of Large Language Models",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "a17f23940e10",
+   "name": "Deep Learning over the Internet: Training Language Models Collaboratively",
+   "url": "https://huggingface.co/blog/collaborative-training",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Deep Learning over the Internet: Training Language Models Collaboratively",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "f437158ef138",
+   "name": "Deep Learning with Proteins",
+   "url": "https://huggingface.co/blog/deep-learning-with-proteins",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Deep Learning with Proteins",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "4b4f03c60c3e",
+   "name": "Deep Q-Learning with Space Invaders",
+   "url": "https://huggingface.co/blog/deep-rl-dqn",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Deep Q-Learning with Space Invaders",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "603a94d6cc69",
+   "name": "Director of Machine Learning Insights",
+   "url": "https://huggingface.co/blog/ml-director-insights",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Director of Machine Learning Insights",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "9e4ac8787766",
+   "name": "Director of Machine Learning Insights [Part 2: SaaS Edition]",
+   "url": "https://huggingface.co/blog/ml-director-insights-2",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Director of Machine Learning Insights [Part 2: SaaS Edition]",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "13ac40747373",
+   "name": "Director of Machine Learning Insights [Part 3: Finance Edition]",
+   "url": "https://huggingface.co/blog/ml-director-insights-3",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Director of Machine Learning Insights [Part 3: Finance Edition]",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "9c88551c1e35",
+   "name": "Director of Machine Learning Insights [Part 4]",
+   "url": "https://huggingface.co/blog/ml-director-insights-4",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Director of Machine Learning Insights [Part 4]",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "b6357b035ab4",
+   "name": "Distributed Training: Train BART/T5 for Summarization using 🤗 Transformers and Amazon SageMaker",
+   "url": "https://huggingface.co/blog/sagemaker-distributed-training-seq2seq",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Distributed Training: Train BART/T5 for Summarization using 🤗 Transformers and Amazon SageMaker",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "21bd8dc17173",
+   "name": "Efficient Table Pre-training without Real Data: An Introduction to TAPEX",
+   "url": "https://huggingface.co/blog/tapex",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "Efficient Table Pre-training without Real Data: An Introduction to TAPEX",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "76a3368a8959",
+   "name": "Ethical Guidelines for developing the Diffusers library",
+   "url": "https://huggingface.co/blog/ethics-diffusers",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Ethical Guidelines for developing the Diffusers library",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "170aa0fac09f",
+   "name": "Faster Training and Inference: Habana Gaudi®2 vs Nvidia A100 80GB",
+   "url": "https://huggingface.co/blog/habana-gaudi-2-benchmark",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Faster Training and Inference: Habana Gaudi®2 vs Nvidia A100 80GB",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "1c01fce6357e",
+   "name": "Federated Learning using Hugging Face and Flower",
+   "url": "https://huggingface.co/blog/fl-with-flower",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Federated Learning using Hugging Face and Flower",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "f7953654ef5a",
+   "name": "Few-shot learning in practice: GPT-Neo and the 🤗 Accelerated Inference API",
+   "url": "https://huggingface.co/blog/few-shot-learning-gpt-neo-and-inference-api",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Few-shot learning in practice: GPT-Neo and the 🤗 Accelerated Inference API",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "d27dad063510",
+   "name": "From PyTorch DDP to Accelerate to Trainer, mastery of distributed training with ease",
+   "url": "https://huggingface.co/blog/pytorch-ddp-accelerate-transformers",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "From PyTorch DDP to Accelerate to Trainer, mastery of distributed training with ease",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "29681b6fc0ef",
+   "name": "From Zero to GPU: A Guide to Building and Scaling Production-Ready CUDA Kernels",
+   "url": "https://huggingface.co/blog/kernel-builder",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "From Zero to GPU: A Guide to Building and Scaling Production-Ready CUDA Kernels",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "63108491568c",
+   "name": "GaLore: Advancing Large Model Training on Consumer-grade Hardware",
+   "url": "https://huggingface.co/blog/galore",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "GaLore: Advancing Large Model Training on Consumer-grade Hardware",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "77018475cd80",
+   "name": "Going multimodal: How Prezi is leveraging the Hub and the Expert Support Program to accelerate their ML roadma",
+   "url": "https://huggingface.co/blog/prezi-case-study",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Going multimodal: How Prezi is leveraging the Hub and the Expert Support Program to accelerate their ML roadmap",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "ecc78817a573",
+   "name": "Habana Labs and Hugging Face Partner to Accelerate Transformer Model Training",
+   "url": "https://huggingface.co/blog/habana",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Habana Labs and Hugging Face Partner to Accelerate Transformer Model Training",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "1474750a1784",
+   "name": "How Sempre Health is leveraging the Expert Acceleration Program to accelerate their ML roadmap",
+   "url": "https://huggingface.co/blog/sempre-health-eap-case-study",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How Sempre Health is leveraging the Expert Acceleration Program to accelerate their ML roadmap",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "c4aeff990b23",
+   "name": "How to Build a Healthcare Robot from Simulation to Deployment with NVIDIA Isaac for Healthcare",
+   "url": "https://huggingface.co/blog/nvidia/nvidia-isaac-for-healthcare",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to Build a Healthcare Robot from Simulation to Deployment with NVIDIA Isaac for Healthcare",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "533ce0d8772b",
+   "name": "How to Build an MCP Server with Gradio",
+   "url": "https://huggingface.co/blog/gradio-mcp",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to Build an MCP Server with Gradio",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "f158d3fe3dc9",
+   "name": "How to Install and Use the Hugging Face Unity API",
+   "url": "https://huggingface.co/blog/unity-api",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to Install and Use the Hugging Face Unity API",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "66bd8767c347",
+   "name": "How to Use Transformers.js in a Chrome Extension",
+   "url": "https://huggingface.co/blog/transformersjs-chrome-extension",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to Use Transformers.js in a Chrome Extension",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "100e89029424",
+   "name": "How to build scalable web apps with OpenAI's Privacy Filter",
+   "url": "https://huggingface.co/blog/openai-privacy-filter-web-apps",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to build scalable web apps with OpenAI's Privacy Filter",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "028400306a7e",
+   "name": "How to deploy and fine-tune DeepSeek models on AWS",
+   "url": "https://huggingface.co/blog/deepseek-r1-aws",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to deploy and fine-tune DeepSeek models on AWS",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "78b038b0ef44",
+   "name": "How to generate text: using different decoding methods for language generation with Transformers",
+   "url": "https://huggingface.co/blog/how-to-generate",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to generate text: using different decoding methods for language generation with Transformers",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "a67cb89b37c3",
+   "name": "How to host a Unity game in a Space",
+   "url": "https://huggingface.co/blog/unity-in-spaces",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to host a Unity game in a Space",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "2ccdc065fecb",
+   "name": "How to train a Language Model with Megatron-LM",
+   "url": "https://huggingface.co/blog/megatron-training",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to train a Language Model with Megatron-LM",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "00d47c7482b5",
+   "name": "How to train a new language model from scratch using Transformers and Tokenizers",
+   "url": "https://huggingface.co/blog/how-to-train",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to train a new language model from scratch using Transformers and Tokenizers",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "897b23f72056",
+   "name": "How to train your model dynamically using adversarial data",
+   "url": "https://huggingface.co/blog/mnist-adversarial",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "How to train your model dynamically using adversarial data",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "42f60670447c",
+   "name": "Hugging Face Machine Learning Demos on arXiv",
+   "url": "https://huggingface.co/blog/arxiv",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Hugging Face Machine Learning Demos on arXiv",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "09bc072b8414",
+   "name": "Huggy Lingo: Using Machine Learning to Improve Language Metadata on the Hugging Face Hub",
+   "url": "https://huggingface.co/blog/huggy-lingo",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Huggy Lingo: Using Machine Learning to Improve Language Metadata on the Hugging Face Hub",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "150ec9931947",
+   "name": "Illustrating Reinforcement Learning from Human Feedback (RLHF)",
+   "url": "https://huggingface.co/blog/rlhf",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Illustrating Reinforcement Learning from Human Feedback (RLHF)",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "34fd11f79f27",
+   "name": "Improving Hugging Face Training Efficiency Through Packing with Flash Attention 2",
+   "url": "https://huggingface.co/blog/packing-with-FA2",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Improving Hugging Face Training Efficiency Through Packing with Flash Attention 2",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "a4feedc51690",
+   "name": "Intel and Hugging Face Partner to Democratize Machine Learning Hardware Acceleration",
+   "url": "https://huggingface.co/blog/intel",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Intel and Hugging Face Partner to Democratize Machine Learning Hardware Acceleration",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "c20249bde8d6",
+   "name": "Introducing Training Cluster as a Service - a new collaboration with NVIDIA",
+   "url": "https://huggingface.co/blog/nvidia-training-cluster",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "Introducing Training Cluster as a Service - a new collaboration with NVIDIA",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "e7a914945e85",
+   "name": "Introducing the Private Hub: A New Way to Build With Machine Learning",
+   "url": "https://huggingface.co/blog/introducing-private-hub",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "Introducing the Private Hub: A New Way to Build With Machine Learning",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "d2f67a277d04",
+   "name": "Introducing ⚔️ AI vs. AI ⚔️ a deep reinforcement learning multi-agents competition system",
+   "url": "https://huggingface.co/blog/aivsai",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "Introducing ⚔️ AI vs. AI ⚔️ a deep reinforcement learning multi-agents competition system",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "e418dfa03598",
+   "name": "Introduction to 3D Gaussian Splatting",
+   "url": "https://huggingface.co/blog/gaussian-splatting",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "Introduction to 3D Gaussian Splatting",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "b9e8ddb3f8de",
+   "name": "Introduction to Graph Machine Learning",
+   "url": "https://huggingface.co/blog/intro-graphml",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "Introduction to Graph Machine Learning",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "fbf6509faf3f",
+   "name": "Introduction to ggml",
+   "url": "https://huggingface.co/blog/introduction-to-ggml",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "Introduction to ggml",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "6d0a334604ba",
+   "name": "Jupyter Agents: training LLMs to reason with notebooks",
+   "url": "https://huggingface.co/blog/jupyter-agent-2",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Jupyter Agents: training LLMs to reason with notebooks",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "f836485ee73f",
+   "name": "LLM Inference on Edge: A Fun and Easy Guide to run LLMs via React Native on your Phone!",
+   "url": "https://huggingface.co/blog/llm-inference-on-edge",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "LLM Inference on Edge: A Fun and Easy Guide to run LLMs via React Native on your Phone!",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "9d667127d13f",
+   "name": "LeRobot v0.4.0: Supercharging OSS Robot Learning",
+   "url": "https://huggingface.co/blog/lerobot-release-v040",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "LeRobot v0.4.0: Supercharging OSS Robot Learning",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "6d932bab4d33",
+   "name": "Learn the Hugging Face Kernel Hub in 5 Minutes",
+   "url": "https://huggingface.co/blog/hello-hf-kernels",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Learn the Hugging Face Kernel Hub in 5 Minutes",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "70cba1c19efd",
+   "name": "Let's talk about biases in machine learning! Ethics and Society Newsletter #2",
+   "url": "https://huggingface.co/blog/ethics-soc-2",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Let's talk about biases in machine learning! Ethics and Society Newsletter #2",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "05ccdc19191c",
+   "name": "Liftoff! How to get started with your first ML project 🚀",
+   "url": "https://huggingface.co/blog/your-first-ml-project",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Liftoff! How to get started with your first ML project 🚀",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "f9f9cb98a85c",
+   "name": "LoRA training scripts of the world, unite!",
+   "url": "https://huggingface.co/blog/sdxl_lora_advanced_script",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "LoRA training scripts of the world, unite!",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "eaf4a179e684",
+   "name": "MCP for Research: How to Connect AI to Research Tools",
+   "url": "https://huggingface.co/blog/mcp-for-research",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "MCP for Research: How to Connect AI to Research Tools",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "bd9063b9d82f",
+   "name": "Machine Learning Experts - Lewis Tunstall",
+   "url": "https://huggingface.co/blog/lewis-tunstall-interview",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Machine Learning Experts - Lewis Tunstall",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "95af6c3facbb",
+   "name": "Machine Learning Experts - Margaret Mitchell",
+   "url": "https://huggingface.co/blog/meg-mitchell-interview",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Machine Learning Experts - Margaret Mitchell",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "6be38631d68c",
+   "name": "Machine Learning Experts - Sasha Luccioni",
+   "url": "https://huggingface.co/blog/sasha-luccioni-interview",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Machine Learning Experts - Sasha Luccioni",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "0a1b4fcbd1a3",
+   "name": "Mini-R1: Reproduce Deepseek R1 „aha moment“ a RL tutorial",
+   "url": "https://huggingface.co/blog/open-r1/mini-r1-contdown-game",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Mini-R1: Reproduce Deepseek R1 „aha moment“ a RL tutorial",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "7218f4be0141",
+   "name": "Non-engineers guide: Train a LLaMA 2 chatbot",
+   "url": "https://huggingface.co/blog/Llama2-for-non-engineers",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Non-engineers guide: Train a LLaMA 2 chatbot",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "e53acf6eb1da",
+   "name": "Open R1: How to use OlympicCoder locally for coding",
+   "url": "https://huggingface.co/blog/olympic-coder-lmstudio",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Open R1: How to use OlympicCoder locally for coding",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "c9bd68dfcb8f",
+   "name": "Open Source Developers Guide to the EU AI Act",
+   "url": "https://huggingface.co/blog/eu-ai-act-for-oss-developers",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Open Source Developers Guide to the EU AI Act",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "abc75ee01de5",
+   "name": "Optimum+ONNX Runtime - Easier, Faster training for your Hugging Face models",
+   "url": "https://huggingface.co/blog/optimum-onnxruntime-training",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Optimum+ONNX Runtime - Easier, Faster training for your Hugging Face models",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "1d3a64f7b8a6",
+   "name": "PRX Part 3 — Training a Text-to-Image Model in 24h!",
+   "url": "https://huggingface.co/blog/Photoroom/prx-part3",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "PRX Part 3 — Training a Text-to-Image Model in 24h!",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "5a7f4f87ed8b",
+   "name": "Post-Training Isaac GR00T N1.5 for LeRobot SO-101 Arm",
+   "url": "https://huggingface.co/blog/nvidia/gr00t-n1-5-so101-tuning",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Post-Training Isaac GR00T N1.5 for LeRobot SO-101 Arm",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "a5e59d217d8e",
+   "name": "Practical 3D Asset Generation: A Step-by-Step Guide",
+   "url": "https://huggingface.co/blog/3d-assets",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Practical 3D Asset Generation: A Step-by-Step Guide",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "442e91c104b6",
+   "name": "Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler",
+   "url": "https://huggingface.co/blog/torch-profiler",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "Profiling in PyTorch (Part 1): A Beginner's Guide to torch.profiler",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "fc14db911b14",
+   "name": "SetFit: Efficient Few-Shot Learning Without Prompts",
+   "url": "https://huggingface.co/blog/setfit",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "SetFit: Efficient Few-Shot Learning Without Prompts",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "3a64644c5419",
+   "name": "Smol2Operator: Post-Training GUI Agents for Computer Use",
+   "url": "https://huggingface.co/blog/smol2operator",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Smol2Operator: Post-Training GUI Agents for Computer Use",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "bb663df25331",
+   "name": "StackLLaMA: A hands-on guide to train LLaMA with RLHF",
+   "url": "https://huggingface.co/blog/stackllama",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "StackLLaMA: A hands-on guide to train LLaMA with RLHF",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "fbf5cdd41e30",
+   "name": "Supercharged Customer Service with Machine Learning",
+   "url": "https://huggingface.co/blog/supercharge-customer-service-with-machine-learning",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Supercharged Customer Service with Machine Learning",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "77b9cd00420d",
+   "name": "TRL v1.0: Post-Training Library Built to Move with the Field",
+   "url": "https://huggingface.co/blog/trl-v1",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "TRL v1.0: Post-Training Library Built to Move with the Field",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "655110dd111b",
+   "name": "The Age of Machine Learning As Code Has Arrived",
+   "url": "https://huggingface.co/blog/the-age-of-ml-as-code",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "The Age of Machine Learning As Code Has Arrived",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "3eeaf3833a4a",
+   "name": "The NLP Course is becoming the LLM Course",
+   "url": "https://huggingface.co/blog/llm-course",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "The NLP Course is becoming the LLM Course",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "9021f6108f29",
+   "name": "The Technology Behind BLOOM Training",
+   "url": "https://huggingface.co/blog/bloom-megatron-deepspeed",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "The Technology Behind BLOOM Training",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "3b01c96249dd",
+   "name": "Train a Sentence Embedding Model with 1B Training Pairs",
+   "url": "https://huggingface.co/blog/1b-sentence-embeddings",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Train a Sentence Embedding Model with 1B Training Pairs",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "748eb1beb016",
+   "name": "Training CodeParrot 🦜 from Scratch",
+   "url": "https://huggingface.co/blog/codeparrot",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training CodeParrot 🦜 from Scratch",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "a0998dd5fe9d",
+   "name": "Training Design for Text-to-Image Models: Lessons from Ablations",
+   "url": "https://huggingface.co/blog/Photoroom/prx-part2",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training Design for Text-to-Image Models: Lessons from Ablations",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "babc65605527",
+   "name": "Training Stable Diffusion with Dreambooth using Diffusers",
+   "url": "https://huggingface.co/blog/dreambooth",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training Stable Diffusion with Dreambooth using Diffusers",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "ad12e1b06596",
+   "name": "Training a language model with 🤗 Transformers using TensorFlow and TPUs",
+   "url": "https://huggingface.co/blog/tf_tpu",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training a language model with 🤗 Transformers using TensorFlow and TPUs",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "7eb4f918a6f4",
+   "name": "Training and Finetuning Embedding Models with Sentence Transformers",
+   "url": "https://huggingface.co/blog/train-sentence-transformers",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training and Finetuning Embedding Models with Sentence Transformers",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "cea6b0e8b891",
+   "name": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+   "url": "https://huggingface.co/blog/train-multi-vector-encoder",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "fbf6d8cdeec5",
+   "name": "Training and Finetuning Multimodal Embedding & Reranker Models with Sentence Transformers",
+   "url": "https://huggingface.co/blog/train-multimodal-sentence-transformers",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training and Finetuning Multimodal Embedding & Reranker Models with Sentence Transformers",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "cb0f8fe8c319",
+   "name": "Training and Finetuning Reranker Models with Sentence Transformers",
+   "url": "https://huggingface.co/blog/train-reranker",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training and Finetuning Reranker Models with Sentence Transformers",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "db59d6131c69",
+   "name": "Training and Finetuning Sparse Embedding Models with Sentence Transformers",
+   "url": "https://huggingface.co/blog/train-sparse-encoder",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training and Finetuning Sparse Embedding Models with Sentence Transformers",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "3076bb1bb107",
+   "name": "Training mRNA Language Models Across 25 Species for $165",
+   "url": "https://huggingface.co/blog/OpenMed/training-mrna-models-25-species",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Training mRNA Language Models Across 25 Species for $165",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "1ef0e397131d",
+   "name": "Ulysses Sequence Parallelism: Training with Million-Token Contexts",
+   "url": "https://huggingface.co/blog/ulysses-sp",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Ulysses Sequence Parallelism: Training with Million-Token Contexts",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "225863ee2a2b",
+   "name": "Unlocking Agentic RL Training for GPT-OSS: A Practical Retrospective",
+   "url": "https://huggingface.co/blog/LinkedIn/gpt-oss-agentic-rl",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Unlocking Agentic RL Training for GPT-OSS: A Practical Retrospective",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "2389fd2bdc2e",
+   "name": "Using Machine Learning to Aid Survivors and Race through Time",
+   "url": "https://huggingface.co/blog/using-ml-for-disasters",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Using Machine Learning to Aid Survivors and Race through Time",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "6b7c1d0dc9b0",
+   "name": "Very Large Language Models and How to Evaluate Them",
+   "url": "https://huggingface.co/blog/zero-shot-eval-on-the-hub",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "Very Large Language Models and How to Evaluate Them",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "43a1d33211b0",
+   "name": "We Raised $100 Million for Open & Collaborative Machine Learning 🚀",
+   "url": "https://huggingface.co/blog/series-c",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "We Raised $100 Million for Open & Collaborative Machine Learning 🚀",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "a67f3eaa80ec",
+   "name": "What We Learned by Reproducing 2,200 papers from ICML",
+   "url": "https://huggingface.co/blog/icml-2026-open-reproductions",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "What We Learned by Reproducing 2,200 papers from ICML",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "10e206b36474",
+   "name": "huggingface_hub v1.0: Five Years of Building the Foundation of Open Machine Learning",
+   "url": "https://huggingface.co/blog/huggingface-hub-v1",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 40,
+   "desc": "huggingface_hub v1.0: Five Years of Building the Foundation of Open Machine Learning",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "e224adffb38f",
+   "name": "🪆 Introduction to Matryoshka Embedding Models",
+   "url": "https://huggingface.co/blog/matryoshka",
+   "cat": "AI/ML",
+   "difficulty": "intermediate",
+   "duration": 20,
+   "desc": "🪆 Introduction to Matryoshka Embedding Models",
+   "tags": [
+    "ML",
+    "Transformers",
+    "NLP"
+   ],
+   "source": "Hugging Face"
+  },
+  {
+   "id": "f2bddd0a614a",
+   "name": "Agentic AI architecture: how to design multi-agent systems that actually work",
+   "url": "https://www.udacity.com/blog/agentic-ai-architecture-how-to-design-multi-agent-systems-that-actually-work/",
+   "cat": "Career",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Last Updated on June 12, 2026 Picture a support operations pipeline built to handle billing inquiries. A customer writes in with a request that combines a billing dispute, a policy",
+   "tags": [
+    "Career",
+    "Nanodegree"
+   ],
+   "source": "Udacity Blog"
+  },
+  {
+   "id": "1763a02df336",
+   "name": "How to Build an AI Agent: Step-by-Step with Python",
+   "url": "https://www.udacity.com/blog/how-to-build-an-ai-agent-step-by-step-with-python/",
+   "cat": "Career",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Last Updated on August 18, 2026 You write a Python script that calls an LLM. You give it a system prompt, feed in a user question, and get a response back. It looks like an agent. ",
+   "tags": [
+    "Career",
+    "Nanodegree"
+   ],
+   "source": "Udacity Blog"
+  },
+  {
+   "id": "7f2de0b0a971",
+   "name": "LangChain agents tutorial: build a multi-step workflow in Python",
+   "url": "https://www.udacity.com/blog/langchain-agents-tutorial-build-a-multi-step-workflow-in-python/",
+   "cat": "Career",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Last Updated on June 12, 2026 A chatbot that answers questions from a knowledge base sounds impressive in a demo. Then someone asks it a question that requires checking two sources",
+   "tags": [
+    "Career",
+    "Nanodegree"
+   ],
+   "source": "Udacity Blog"
+  },
+  {
+   "id": "ae5a17c62742",
+   "name": "Prompt chaining explained: how to build reasoning pipelines in Python",
+   "url": "https://www.udacity.com/blog/prompt-chaining-explained-how-to-build-reasoning-pipelines-in-python/",
+   "cat": "Career",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Last Updated on June 12, 2026 Imagine asking a friend who has never baked anything to produce a multi-layered cake. No recipe. No step-by-step instructions. Just: &#8220;Make me a ",
+   "tags": [
+    "Career",
+    "Nanodegree"
+   ],
+   "source": "Udacity Blog"
+  },
+  {
+   "id": "516ad47addf6",
+   "name": "A new way to keep your AWS Certification current",
+   "url": "https://aws.amazon.com/blogs/training-and-certification/a-new-way-to-keep-your-aws-certification-current/",
+   "cat": "Cloud",
+   "difficulty": "mixed",
+   "duration": 80,
+   "desc": "Starting today, you can&nbsp;maintain&nbsp;your AWS Certification for an&nbsp;additional&nbsp;year by completing curated training and hands-on labs on&nbsp;AWS Skill Builder&nbsp;i",
+   "tags": [
+    "AWS",
+    "Cloud",
+    "Certification"
+   ],
+   "source": "AWS Training"
+  },
+  {
+   "id": "5bab222aa72c",
+   "name": "Introducing AWS SimuLearn learning plan badges: Verifiable proof of hands-on cloud skills",
+   "url": "https://aws.amazon.com/blogs/training-and-certification/introducing-aws-simulearn-learning-plan-badges-verifiable-proof-of-hands-on-cloud-skills/",
+   "cat": "Cloud",
+   "difficulty": "mixed",
+   "duration": 20,
+   "desc": "Today we're excited to announce AWS SimuLearn learning plan badges,&nbsp;a new way for learners to showcase the hands-on cloud skills they've built. When a learner completes all as",
+   "tags": [
+    "AWS",
+    "Cloud",
+    "Certification"
+   ],
+   "source": "AWS Training"
+  },
+  {
+   "id": "1b38407abea7",
+   "name": "New courses and certification updates from AWS Training and Certification in May 2026",
+   "url": "https://aws.amazon.com/blogs/training-and-certification/may-2026-new-offerings/",
+   "cat": "Cloud",
+   "difficulty": "mixed",
+   "duration": 80,
+   "desc": "Welcome to May's post announcing new training course launches and certification launches — helping equip you and your teams with the skills to work with AWS services and solutions.",
+   "tags": [
+    "AWS",
+    "Cloud",
+    "Certification"
+   ],
+   "source": "AWS Training"
+  },
+  {
+   "id": "7416170bc1fc",
+   "name": "Updates to AWS Certified Machine Learning Engineer – Associate (MLA-C02)",
+   "url": "https://aws.amazon.com/blogs/training-and-certification/updates-to-aws-certified-machine-learning-engineer-associate-mla-c02/",
+   "cat": "Cloud",
+   "difficulty": "mixed",
+   "duration": 80,
+   "desc": "AWS Certification is updating the AWS Certified Machine Learning Engineer - Associate exam. Registration for the beta version of the exam will be available in English starting Sept",
+   "tags": [
+    "AWS",
+    "Cloud",
+    "Certification"
+   ],
+   "source": "AWS Training"
+  },
+  {
+   "id": "c20355200f29",
+   "name": "5 Easy Protection Spells Every Beginner Witch Should Learn in 2026",
+   "url": "https://dev.to/samchenreviews/5-easy-protection-spells-every-beginner-witch-should-learn-in-2026-42bb",
+   "cat": "Community",
+   "difficulty": "beginner",
+   "duration": 10,
+   "desc": "There's a quiet, powerful moment that happens for every beginner witch: the first time you feel the need to protect your energy. Maybe it's after a draining conversation, a night o",
+   "tags": [
+    "Tutorial",
+    "Beginner"
+   ],
+   "source": "dev.to Beginners"
+  },
+  {
+   "id": "3040e56003f6",
+   "name": "A free course: Machine Learning Zoomcamp",
+   "url": "https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp Comments URL: https://news.ycombinator.com/item?id=36955598 Points: 3 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "3aebb060bfdd",
+   "name": "Accelerate Your Learning with ChatGPT: Free Course by Barbara Oakley",
+   "url": "https://www.coursera.org/learn/learning-chatgpt",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://www.coursera.org/learn/learning-chatgpt Comments URL: https://news.ycombinator.com/item?id=41464264 Points: 1 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "7dfe5c7d89a8",
+   "name": "Advanced Functional Programming Free Course",
+   "url": "http://www.cs.nott.ac.uk/~pszgmh/afp.html",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: http://www.cs.nott.ac.uk/~pszgmh/afp.html Comments URL: https://news.ycombinator.com/item?id=39579721 Points: 50 # Comments: 5",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "0dfc671ae795",
+   "name": "AppMafia shared a free course for building million dollars app",
+   "url": "https://appmafia.com/",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://appmafia.com/ Comments URL: https://news.ycombinator.com/item?id=45044735 Points: 2 # Comments: 1",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "194b2bdce995",
+   "name": "Free Course on Security Headers, for Developers",
+   "url": "https://academy.semgrep.dev/courses/security-headers",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://academy.semgrep.dev/courses/security-headers Comments URL: https://news.ycombinator.com/item?id=43787087 Points: 12 # Comments: 3",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "77a9f0fbdca3",
+   "name": "Free Course: Building LLM-Powered Apps",
+   "url": "https://www.wandb.courses/courses/building-llm-powered-apps",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://www.wandb.courses/courses/building-llm-powered-apps Comments URL: https://news.ycombinator.com/item?id=36425856 Points: 1 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "99866a441e0b",
+   "name": "Free Course: Learn to Build Data Apps with Streamlit",
+   "url": "https://arilamstein.com/blog/2025/09/02/free-course-learn-to-build-data-apps-with-streamlit/",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://arilamstein.com/blog/2025/09/02/free-course-learn-to-build-data-apps-with-streamlit/ Comments URL: https://news.ycombinator.com/item?id=45106797 Points: 3 # Co",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "ed9ae86eee56",
+   "name": "Free course on Building products with OpenAI",
+   "url": "https://corise.com/course/building-ai-products-with-openai?utm_campaign=building-ai-products-with-openai&utm_medium=SOCIAL_MEDIA&utm_source=INSTRUCTOR&utm_term=sidharth",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://corise.com/course/building-ai-products-with-openai?utm_campaign=building-ai-products-with-openai&utm_medium=SOCIAL_MEDIA&utm_source=INSTRUCTOR&utm_term=sidhart",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "b886243370ca",
+   "name": "Genomics for builders – free course on cfDNA and NIPT",
+   "url": "https://learn.eabhaseq.com/",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://learn.eabhaseq.com/ Comments URL: https://news.ycombinator.com/item?id=47429148 Points: 1 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "34392f012fdb",
+   "name": "Here we offer a free course on graphic design",
+   "url": "https://sites.google.com/view/creatively16/home",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://sites.google.com/view/creatively16/home Comments URL: https://news.ycombinator.com/item?id=41375743 Points: 2 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "20e4f442d633",
+   "name": "How to Be Remarkable with Guy Kawasaki (Free Course)",
+   "url": "https://www.canva.com/learn/guy-kawasaki/",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://www.canva.com/learn/guy-kawasaki/ Comments URL: https://news.ycombinator.com/item?id=39762106 Points: 1 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "982ddb99314d",
+   "name": "How to Get a Developer Job – Even in This Economy (4 hour free course) [video]",
+   "url": "https://www.youtube.com/watch?v=6nz8GXjxiHg",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://www.youtube.com/watch?v=6nz8GXjxiHg Comments URL: https://news.ycombinator.com/item?id=40229338 Points: 3 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "41af037a9859",
+   "name": "How to Start Freelancing with No Experience",
+   "url": "https://dev.to/sinatra182/how-to-start-freelancing-with-no-experience-3157",
+   "cat": "Community",
+   "difficulty": "beginner",
+   "duration": 20,
+   "desc": "How to Start Freelancing with No Experience Introduction In 2026, earning money online is more accessible than ever. This guide covers real methods that pay — no fluff. Methods Tha",
+   "tags": [
+    "Tutorial",
+    "Beginner"
+   ],
+   "source": "dev.to Beginners"
+  },
+  {
+   "id": "e5de924ddd14",
+   "name": "Introduction to NotebookLM – Free Course",
+   "url": "https://dair-ai.thinkific.com/courses/introduction-notebooklm",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 20,
+   "desc": "Article URL: https://dair-ai.thinkific.com/courses/introduction-notebooklm Comments URL: https://news.ycombinator.com/item?id=41746486 Points: 2 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "24517c05a583",
+   "name": "Launching a free course on how to use AI models (Llama2) locally in Unity",
+   "url": "https://news.ycombinator.com/item?id=39593119",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "I’m launching this free course next week with Hugging Face, for game developers who want to run AI models in their game.We'll learn to run LLM models in Unity directly (with Unity ",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "36a91db9f4f9",
+   "name": "New free course on RISC-V processor design on YouTube",
+   "url": "https://www.youtube.com/watch?v=izPdo7n1u1I",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://www.youtube.com/watch?v=izPdo7n1u1I Comments URL: https://news.ycombinator.com/item?id=42910687 Points: 5 # Comments: 1",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "df4e711ad8ca",
+   "name": "OpenUSD Complete Free Course",
+   "url": "https://omniverseusd.github.io/",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 60,
+   "desc": "Article URL: https://omniverseusd.github.io/ Comments URL: https://news.ycombinator.com/item?id=40715261 Points: 2 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "92c6c5386502",
+   "name": "Personal finance with Laravel – Free course",
+   "url": "https://www.maiobarbero.dev/courses/personal-finance-with-laravel/",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://www.maiobarbero.dev/courses/personal-finance-with-laravel/ Comments URL: https://news.ycombinator.com/item?id=48049687 Points: 2 # Comments: 0",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "787dd2be1d7a",
+   "name": "Show HN: A free course on how to write a good Midjourney/ChatGPT prompt",
+   "url": "https://github.com/thinkingjimmy/Learning-Prompt",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "Article URL: https://github.com/thinkingjimmy/Learning-Prompt Comments URL: https://news.ycombinator.com/item?id=37119112 Points: 50 # Comments: 9",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "5613c20213ac",
+   "name": "Show HN: Free Course on New Gemini Python API",
+   "url": "https://www.udemy.com/course/google-gemini-ai-with-python-api/",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "I made a free course on the new Gemini Python API from Google, for the time being they allow up to 60 queries per minute on the free tier, so I figured it would be a good time to l",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "722a3a8dccdf",
+   "name": "Show HN: Free course that teaches engineers how to vibe-code at enterprise scale",
+   "url": "https://ofriw.github.io/AI-Coding-Course/",
+   "cat": "Community",
+   "difficulty": "mixed",
+   "duration": 40,
+   "desc": "A note on “vibe coding”A lot of engineers today use AI in a very vibe-based way: give the model context, hope for the best, iterate until it works.That’s fine for prototypes. It co",
+   "tags": [
+    "Discovery",
+    "HN"
+   ],
+   "source": "HN Free Courses"
+  },
+  {
+   "id": "d40d881f7fcd",
+   "name": "How to Automate Your Tests in Express Using Vitest",
+   "url": "https://www.freecodecamp.org/news/how-to-automate-your-tests-in-express-using-vitest/",
+   "cat": "Web Dev",
+   "difficulty": "beginner",
+   "duration": 20,
+   "desc": "Thinking through API logic while constantly switching tabs to test application integration can be overwhelming and time-consuming. Well, you can save your time and energy by writin",
+   "tags": [
+    "JS",
+    "Python",
+    "Web"
+   ],
+   "source": "freeCodeCamp"
+  },
+  {
+   "id": "d0cee6ef7711",
+   "name": "How to Get Reliable Structured Data Out of an LLM",
+   "url": "https://www.freecodecamp.org/news/how-to-get-reliable-structured-data-out-of-an-llm/",
+   "cat": "Web Dev",
+   "difficulty": "beginner",
+   "duration": 20,
+   "desc": "Most tutorials about calling a language model end at JSON.parse(response.content). That line works on your first ten test cases. Then you ship, and somewhere around request four hu",
+   "tags": [
+    "JS",
+    "Python",
+    "Web"
+   ],
+   "source": "freeCodeCamp"
+  },
+  {
+   "id": "2ef340280fbd",
+   "name": "How to Tell If Your Search Console Impressions Came From a Human or a Machine",
+   "url": "https://www.freecodecamp.org/news/how-to-tell-if-search-console-impressions-are-human-or-machine/",
+   "cat": "Web Dev",
+   "difficulty": "beginner",
+   "duration": 20,
+   "desc": "Your Search Console report says a page earned 3,068 impressions on the first page of Google over 90 days. But it earned zero clicks in that same time period. The usual reading is t",
+   "tags": [
+    "JS",
+    "Python",
+    "Web"
+   ],
+   "source": "freeCodeCamp"
+  },
+  {
+   "id": "15842fce0389",
+   "name": "How to Test Flutter Apps: Unit, Widget, Golden, and Integration Tests Explained",
+   "url": "https://www.freecodecamp.org/news/how-to-test-flutter-apps-unit-widget-golden-and-integration-tests-explained/",
+   "cat": "Web Dev",
+   "difficulty": "beginner",
+   "duration": 20,
+   "desc": "The first time I was asked \"what's your test coverage?\" in a technical interview, I didn't have a good answer. I had shipped a couple of real Flutter apps by then. They worked and ",
+   "tags": [
+    "JS",
+    "Python",
+    "Web"
+   ],
+   "source": "freeCodeCamp"
+  }
+ ]
+}
