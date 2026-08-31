@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-08-31T10:04:53+00:00",
- "total": 158,
+ "updated_at": "2026-08-31T10:17:21+00:00",
+ "total": 159,
  "curated": 18,
- "from_feeds": 140,
+ "from_feeds": 141,
  "courses": [
   {
    "id": "deeplearning",
@@ -2017,6 +2017,20 @@
    "source": "HN Free Courses"
   },
   {
+   "id": "a4caa06508cd",
+   "name": "AI Prompt Engineering for Beginners: A Practical Guide to Getting Better Results From AI",
+   "url": "https://dev.to/flaviopilotodasilva/ai-prompt-engineering-for-beginners-a-practical-guide-to-getting-better-results-from-ai-38me",
+   "cat": "Community",
+   "difficulty": "beginner",
+   "duration": 10,
+   "desc": "You don’t need to be a programmer to write great prompts. You just need to know how to communicate clearly. The first time most people use an AI chatbot, they expect magic. They ty",
+   "tags": [
+    "Tutorial",
+    "Beginner"
+   ],
+   "source": "dev.to Beginners"
+  },
+  {
    "id": "3aebb060bfdd",
    "name": "Accelerate Your Learning with ChatGPT: Free Course by Barbara Oakley",
    "url": "https://www.coursera.org/learn/learning-chatgpt",
@@ -2171,20 +2185,6 @@
    "source": "HN Free Courses"
   },
   {
-   "id": "41af037a9859",
-   "name": "How to Start Freelancing with No Experience",
-   "url": "https://dev.to/sinatra182/how-to-start-freelancing-with-no-experience-3157",
-   "cat": "Community",
-   "difficulty": "beginner",
-   "duration": 20,
-   "desc": "How to Start Freelancing with No Experience Introduction In 2026, earning money online is more accessible than ever. This guide covers real methods that pay — no fluff. Methods Tha",
-   "tags": [
-    "Tutorial",
-    "Beginner"
-   ],
-   "source": "dev.to Beginners"
-  },
-  {
    "id": "e5de924ddd14",
    "name": "Introduction to NotebookLM – Free Course",
    "url": "https://dair-ai.thinkific.com/courses/introduction-notebooklm",
@@ -2225,6 +2225,20 @@
     "HN"
    ],
    "source": "HN Free Courses"
+  },
+  {
+   "id": "47b37bec8e76",
+   "name": "Oil Painting: Learn How to Get Started in This Guide",
+   "url": "https://dev.to/flaviopilotodasilva/oil-painting-learn-how-to-get-started-in-this-guide-2dll",
+   "cat": "Community",
+   "difficulty": "beginner",
+   "duration": 20,
+   "desc": "Oil Painting: Learn How to Get Started in This Guide Everything you need to begin your oil painting journey with confidence, even if you’ve never picked up a brush before. Standing",
+   "tags": [
+    "Tutorial",
+    "Beginner"
+   ],
+   "source": "dev.to Beginners"
   },
   {
    "id": "df4e711ad8ca",
