@@ -5,43 +5,58 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Free Course Directory</title>
 <style>
-:root{--bg:#0a0a0f;--fg:#e8e8ed;--muted:#6b6b7b;--acc:#00d4aa;--card:#14141e;--border:#2a2a3e}
+:root{
+  --bg:#faf6ef;--fg:#1d1b16;--muted:#8a8578;--line:#e9e2d5;--card:#fff;
+  --yellow:#ffd84d;--yellow-s:#fff3c7;
+  --pink:#ff9ec7;--pink-s:#ffe1ee;
+  --purple:#b9a4ff;--purple-s:#ece5ff;
+  --teal:#7ee0c8;--teal-s:#d6f6ee;
+  --blue:#9ecbff;--blue-s:#e2f0ff;
+  --coral:#ff8f7a;--coral-s:#ffe2db;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;min-height:100vh;min-height:100dvh;padding:clamp(12px,3vw,32px);max-width:1600px;margin:0 auto}
-h1{font-size:clamp(1.2rem,4vw,1.7rem);font-weight:700;color:var(--acc)}
-.sub{font-size:clamp(0.68rem,2vw,0.8rem);color:var(--muted);margin-top:4px;margin-bottom:16px}
-.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
-select,input{background:var(--card);border:1px solid var(--border);color:var(--fg);padding:8px 12px;border-radius:6px;font-size:clamp(0.8rem,2vw,0.9rem);min-height:40px;flex:1 1 auto;min-width:130px}
-select:focus,input:focus{outline:none;border-color:var(--acc)}
-.count{font-size:clamp(0.7rem,2vw,0.8rem);color:var(--muted);margin-bottom:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(10px,2vw,18px)}
-.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:clamp(12px,2.5vw,18px);display:flex;flex-direction:column;transition:all .2s}
-.card:hover{border-color:var(--acc);transform:translateY(-2px)}
-.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
-.card-title{font-weight:600;font-size:clamp(0.9rem,2.4vw,1rem);line-height:1.3;overflow-wrap:anywhere}
+body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;min-height:100dvh;padding:clamp(14px,3vw,40px);max-width:1500px;margin:0 auto}
+.hero{margin-bottom:clamp(16px,3vw,28px)}
+.hero h1{font-size:clamp(1.7rem,6vw,3rem);font-weight:800;letter-spacing:-0.02em;line-height:1.05}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--muted)}
+.hero .tag{display:inline-block;margin-top:10px;background:var(--yellow);color:#1d1b16;font-size:clamp(0.72rem,2vw,0.85rem);font-weight:600;padding:6px 16px;border-radius:999px}
+.sub{font-size:clamp(0.68rem,2vw,0.8rem);color:var(--muted);margin-top:10px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:clamp(16px,3vw,24px) 0}
+select,input{background:var(--card);border:1.5px solid var(--line);color:var(--fg);padding:10px 14px;border-radius:14px;font-size:clamp(0.8rem,2vw,0.9rem);min-height:44px;flex:1 1 auto;min-width:130px;font-family:inherit}
+select:focus,input:focus{outline:none;border-color:var(--purple)}
+.count{font-size:clamp(0.7rem,2vw,0.8rem);color:var(--muted);margin-bottom:16px;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:clamp(12px,2vw,20px)}
+.card{background:var(--card);border:none;border-radius:24px;padding:clamp(16px,2.5vw,22px);display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s;box-shadow:0 2px 0 var(--line)}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.card::before{content:"";position:absolute;top:-30px;right:-30px;width:90px;height:90px;border-radius:50%;background:var(--blob,var(--yellow-s));opacity:.9}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:10px;position:relative;z-index:1}
+.card-title{font-weight:700;font-size:clamp(0.95rem,2.4vw,1.08rem);line-height:1.25;overflow-wrap:anywhere}
 .card-title a{color:var(--fg);text-decoration:none}
-.card-title a:hover{color:var(--acc)}
-.badge{font-size:0.6rem;padding:2px 8px;border-radius:999px;background:rgba(0,212,170,.15);color:var(--acc);text-transform:uppercase;white-space:nowrap;flex-shrink:0}
-.card-desc{font-size:clamp(0.74rem,2vw,0.82rem);color:var(--muted);margin-bottom:12px;line-height:1.4;flex:1;overflow-wrap:anywhere}
-.card-meta{display:flex;gap:6px;font-size:0.66rem;color:var(--muted);margin-bottom:12px;flex-wrap:wrap}
-.card-meta span{background:var(--bg);padding:3px 8px;border-radius:4px;border:1px solid var(--border)}
-.open-btn{display:block;background:var(--acc);color:#0a0a0f;padding:10px 14px;border-radius:6px;text-decoration:none;font-size:clamp(0.78rem,2vw,0.85rem);font-weight:600;text-align:center;min-height:40px}
-.open-btn:hover{background:#00ffcc}
-.empty{text-align:center;padding:40px;color:var(--muted);grid-column:1/-1}
+.card-title a:hover{text-decoration:underline}
+.badge{font-size:0.62rem;padding:5px 11px;border-radius:999px;background:var(--chip,var(--yellow));color:#1d1b16;font-weight:700;text-transform:uppercase;white-space:nowrap;flex-shrink:0;letter-spacing:.02em}
+.card-desc{font-size:clamp(0.76rem,2vw,0.84rem);color:var(--muted);margin-bottom:14px;line-height:1.45;flex:1;overflow-wrap:anywhere;position:relative;z-index:1}
+.card-meta{display:flex;gap:6px;font-size:0.66rem;color:var(--fg);margin-bottom:14px;flex-wrap:wrap;position:relative;z-index:1}
+.card-meta span{background:var(--bg);padding:4px 10px;border-radius:999px;font-weight:600}
+.open-btn{display:flex;align-items:center;justify-content:center;gap:6px;background:#1d1b16;color:#fff;padding:12px 16px;border-radius:16px;text-decoration:none;font-size:clamp(0.8rem,2vw,0.88rem);font-weight:700;text-align:center;min-height:46px;position:relative;z-index:1;transition:background .15s}
+.open-btn:hover{background:#38342b}
+.open-btn .arrow{transition:transform .15s}
+.open-btn:hover .arrow{transform:translateX(3px)}
+.empty{text-align:center;padding:50px 20px;color:var(--muted);grid-column:1/-1;font-size:0.95rem}
 @media(max-width:560px){.controls{flex-direction:column}.controls select,.controls input{width:100%;flex:none}}
-@media(min-width:1400px){.grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}}
+@media(min-width:1300px){.grid{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}}
 </style>
 </head>
 <body>
 
-<h1>Free Course Directory</h1>
+<div class="hero">
+<h1>Discover, Learn, <em>Grow.</em></h1>
+<div class="tag">100% gratis - selalu update</div>
 <div class="sub" id="meta">loading</div>
+</div>
 
 <div class="controls">
-<select id="fCat">
-<option value="all">Semua Kategori</option>
-</select>
+<select id="fCat"><option value="all">Semua Kategori</option></select>
 <select id="fDiff">
 <option value="all">Semua Level</option>
 <option value="beginner">Beginner</option>
@@ -55,13 +70,9 @@ select:focus,input:focus{outline:none;border-color:var(--acc)}
 <option value="medium">20-100 jam</option>
 <option value="long">100+ jam</option>
 </select>
-<select id="fTag">
-<option value="all">Semua Tag</option>
-</select>
-<select id="fSrc">
-<option value="all">Semua Sumber</option>
-</select>
-<input type="text" id="fQ" placeholder="Cari kursus..." style="flex:1;min-width:180px">
+<select id="fTag"><option value="all">Semua Tag</option></select>
+<select id="fSrc"><option value="all">Semua Sumber</option></select>
+<input type="text" id="fQ" placeholder="Cari kursus..." style="flex:2;min-width:180px">
 </div>
 
 <div class="count" id="count"></div>
@@ -69,6 +80,17 @@ select:focus,input:focus{outline:none;border-color:var(--acc)}
 
 <script>
 var COURSES = [];
+
+// pastel color per category (blob bg + chip)
+var PALETTE = ['yellow','pink','purple','teal','blue','coral'];
+var CAT_COLOR = {};
+function colorFor(cat){
+  if (!CAT_COLOR[cat]) {
+    var used = Object.keys(CAT_COLOR).length;
+    CAT_COLOR[cat] = PALETTE[used % PALETTE.length];
+  }
+  return CAT_COLOR[cat];
+}
 
 function el(tag, cls, text) {
   var n = document.createElement(tag);
@@ -79,16 +101,17 @@ function el(tag, cls, text) {
 
 function loadData() {
   fetch('courses.json?v=' + Date.now())
-    .then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      return r.json();
-    })
+    .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(function (data) {
       COURSES = data.courses || [];
       var when = data.updated_at ? new Date(data.updated_at).toLocaleString() : 'unknown';
       document.getElementById('meta').textContent =
         COURSES.length + ' course - ' + (data.curated || 0) + ' platform + ' +
         (data.from_feeds || 0) + ' dari feed - update ' + when;
+      // pre-assign colors sorted so it's stable
+      var cats = {};
+      COURSES.forEach(function(c){ if(c.cat) cats[c.cat]=1; });
+      Object.keys(cats).sort().forEach(colorFor);
       initFilters();
       render();
     })
@@ -107,16 +130,12 @@ function initFilters() {
     (c.tags || []).forEach(function (t) { tags[t] = 1; });
     if (c.source) srcs[c.source] = 1;
   });
-  fill('fCat', cats);
-  fill('fTag', tags);
-  fill('fSrc', srcs);
+  fill('fCat', cats); fill('fTag', tags); fill('fSrc', srcs);
 }
 
 function fill(id, obj) {
   var sel = document.getElementById(id);
-  Object.keys(obj).sort().forEach(function (v) {
-    sel.appendChild(new Option(v, v));
-  });
+  Object.keys(obj).sort().forEach(function (v) { sel.appendChild(new Option(v, v)); });
 }
 
 function render() {
@@ -145,17 +164,19 @@ function render() {
       if (hay.indexOf(q) === -1) return;
     }
 
+    var color = colorFor(c.cat || 'Other');
     var card = el('div', 'card');
+    card.style.setProperty('--blob', 'var(--' + color + '-s)');
 
     var top = el('div', 'card-top');
     var h3 = el('h3', 'card-title');
     var a = el('a', null, c.name);
-    a.href = c.url;
-    a.target = '_blank';
-    a.rel = 'noopener';
+    a.href = c.url; a.target = '_blank'; a.rel = 'noopener';
     h3.appendChild(a);
     top.appendChild(h3);
-    top.appendChild(el('span', 'badge', c.cat || ''));
+    var badge = el('span', 'badge', c.cat || '');
+    badge.style.setProperty('--chip', 'var(--' + color + ')');
+    top.appendChild(badge);
     card.appendChild(top);
 
     card.appendChild(el('p', 'card-desc', c.desc || ''));
@@ -166,19 +187,17 @@ function render() {
     if (c.source) meta.appendChild(el('span', null, c.source));
     card.appendChild(meta);
 
-    var btn = el('a', 'open-btn', 'Buka Course');
-    btn.href = c.url;
-    btn.target = '_blank';
-    btn.rel = 'noopener';
+    var btn = el('a', 'open-btn');
+    btn.href = c.url; btn.target = '_blank'; btn.rel = 'noopener';
+    btn.appendChild(el('span', null, 'Buka Course'));
+    btn.appendChild(el('span', 'arrow', '\u2192'));
     card.appendChild(btn);
 
     grid.appendChild(card);
     shown++;
   });
 
-  if (shown === 0) {
-    grid.appendChild(el('div', 'empty', 'Tidak ada yang cocok dengan filter'));
-  }
+  if (shown === 0) grid.appendChild(el('div', 'empty', 'Tidak ada yang cocok dengan filter'));
   document.getElementById('count').textContent = 'Menampilkan ' + shown + ' dari ' + COURSES.length;
 }
 
