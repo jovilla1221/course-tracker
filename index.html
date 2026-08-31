@@ -8,20 +8,16 @@
 :root{--bg:#0a0a0f;--fg:#e8e8ed;--muted:#6b6b7b;--acc:#00d4aa;--card:#14141e;--border:#2a2a3e}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;min-height:100vh;padding:20px}
-.header{margin-bottom:18px}
-h1{font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--acc),#00ffcc);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-.sub{font-size:0.75rem;color:var(--muted);margin-top:4px}
-.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+h1{font-size:1.5rem;font-weight:700;color:var(--acc)}
+.sub{font-size:0.75rem;color:var(--muted);margin-top:4px;margin-bottom:16px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
 select,input{background:var(--card);border:1px solid var(--border);color:var(--fg);padding:8px 12px;border-radius:6px;font-size:0.85rem}
 select:focus,input:focus{outline:none;border-color:var(--acc)}
-.stats{display:flex;gap:12px;margin-bottom:16px;flex-wrap:wrap}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:8px 14px;min-width:90px}
-.stat-label{font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-.stat-value{font-size:1.1rem;font-weight:700;color:var(--acc)}
+.count{font-size:0.75rem;color:var(--muted);margin-bottom:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;transition:all .2s;display:flex;flex-direction:column}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;display:flex;flex-direction:column;transition:all .2s}
 .card:hover{border-color:var(--acc);transform:translateY(-2px)}
-.card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:8px}
 .card-title{font-weight:600;font-size:0.95rem;line-height:1.3}
 .card-title a{color:var(--fg);text-decoration:none}
 .card-title a:hover{color:var(--acc)}
@@ -29,140 +25,168 @@ select:focus,input:focus{outline:none;border-color:var(--acc)}
 .card-desc{font-size:0.78rem;color:var(--muted);margin-bottom:12px;line-height:1.4;flex:1}
 .card-meta{display:flex;gap:6px;font-size:0.66rem;color:var(--muted);margin-bottom:12px;flex-wrap:wrap}
 .card-meta span{background:var(--bg);padding:3px 8px;border-radius:4px;border:1px solid var(--border)}
-.open-btn{display:inline-block;background:var(--acc);color:#0a0a0f;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:0.8rem;font-weight:600;text-align:center;transition:background .15s}
+.open-btn{display:block;background:var(--acc);color:#0a0a0f;padding:8px 14px;border-radius:6px;text-decoration:none;font-size:0.8rem;font-weight:600;text-align:center}
 .open-btn:hover{background:#00ffcc}
 .empty{text-align:center;padding:40px;color:var(--muted);grid-column:1/-1}
 @media(max-width:480px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="header">
+
 <h1>Free Course Directory</h1>
-<div class="sub" id="lastUpdated">loading</div>
-</div>
+<div class="sub" id="meta">loading</div>
+
 <div class="controls">
-<select id="categoryFilter"><option value="all">Semua Kategori</option</select>
-<select id="difficultyFilter">
+<select id="fCat">
+<option value="all">Semua Kategori</option>
+</select>
+<select id="fDiff">
 <option value="all">Semua Level</option>
 <option value="beginner">Beginner</option>
 <option value="intermediate">Intermediate</option>
 <option value="advanced">Advanced</option>
 <option value="mixed">Mixed</option>
 </select>
-<select id="durationFilter">
+<select id="fDur">
 <option value="all">Semua Durasi</option>
 <option value="short">under 20 jam</option>
 <option value="medium">20-100 jam</option>
 <option value="long">100+ jam</option>
 </select>
-<select id="tagFilter"><option value="all">Semua Tag</option</select>
-<select id="sourceFilter"><option value="all">Semua Sumber</option</select>
-<input type="text" id="searchInput" placeholder="Cari kursus..." style="flex:1;min-width:180px">
+<select id="fTag">
+<option value="all">Semua Tag</option>
+</select>
+<select id="fSrc">
+<option value="all">Semua Sumber</option>
+</select>
+<input type="text" id="fQ" placeholder="Cari kursus..." style="flex:1;min-width:180px">
 </div>
 
-<div class="stats">
-<div class="stat"><div class="stat-label">Total</div><div class="stat-value" id="statTotal">0</div</div>
-<div class="stat"><div class="stat-label">Tampil</div><div class="stat-value" id="statShown">0</div</div>
-</div>
-
-<div class="grid" id="courseGrid</div>
+<div class="count" id="count"></div>
+<div class="grid" id="grid"></div>
 
 <script>
-let COURSES = [];
+var COURSES = [];
 
-function esc(s){ const d = document.createElement('div'); d.textContent = (s == null ? '' : String(s)); return d.innerHTML; }
-
-async function loadCourses(){
-  try {
-    const res = await fetch('courses.json?v=' + Date.now());
-    if (!res.ok) throw new Error('HTTP ' + res.status);
-    const data = await res.json();
-    COURSES = data.courses || [];
-    const when = data.updated_at ? new Date(data.updated_at).toLocaleString() : 'unknown';
-    document.getElementById('lastUpdated').textContent =
-      COURSES.length + ' courses - ' + (data.curated || 0) + ' platform + ' + (data.from_feeds || 0) + ' dari feed - update ' + when;
-    initFilters();
-    render();
-  } catch (err) {
-    console.error(err);
-    document.getElementById('courseGrid').innerHTML = '<div class="empty">Gagal memuat courses.json</div>';
-    document.getElementById('lastUpdated').textContent = 'gagal';
-  }
+function el(tag, cls, text) {
+  var n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
 }
 
-function initFilters(){
-  const cats = new Set(), tags = new Set(), srcs = new Set();
-  COURSES.forEach(function(c){
-    if (c.cat) cats.add(c.cat);
-    (c.tags || []).forEach(function(t){ tags.add(t); });
-    if (c.source) srcs.add(c.source);
+function loadData() {
+  fetch('courses.json?v=' + Date.now())
+    .then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      COURSES = data.courses || [];
+      var when = data.updated_at ? new Date(data.updated_at).toLocaleString() : 'unknown';
+      document.getElementById('meta').textContent =
+        COURSES.length + ' course - ' + (data.curated || 0) + ' platform + ' +
+        (data.from_feeds || 0) + ' dari feed - update ' + when;
+      initFilters();
+      render();
+    })
+    .catch(function (err) {
+      document.getElementById('meta').textContent = 'gagal memuat data';
+      var g = document.getElementById('grid');
+      g.textContent = '';
+      g.appendChild(el('div', 'empty', 'Gagal memuat courses.json: ' + err.message));
+    });
+}
+
+function initFilters() {
+  var cats = {}, tags = {}, srcs = {};
+  COURSES.forEach(function (c) {
+    if (c.cat) cats[c.cat] = 1;
+    (c.tags || []).forEach(function (t) { tags[t] = 1; });
+    if (c.source) srcs[c.source] = 1;
   });
-  fill('categoryFilter', cats);
-  fill('tagFilter', tags);
-  fill('sourceFilter', srcs);
+  fill('fCat', cats);
+  fill('fTag', tags);
+  fill('fSrc', srcs);
 }
 
-function fill(id, set){
-  const el = document.getElementById(id);
-  Array.from(set).sort().forEach(function(v){ el.add(new Option(v, v)); });
+function fill(id, obj) {
+  var sel = document.getElementById(id);
+  Object.keys(obj).sort().forEach(function (v) {
+    sel.appendChild(new Option(v, v));
+  });
 }
 
-function render(){
-  const grid = document.getElementById('courseGrid');
-  const cat = document.getElementById('categoryFilter').value;
-  const diff = document.getElementById('difficultyFilter').value;
-  const dur = document.getElementById('durationFilter').value;
-  const tag = document.getElementById('tagFilter').value;
-  const src = document.getElementById('sourceFilter').value;
-  const q = document.getElementById('searchInput').value.toLowerCase().trim();
+function render() {
+  var cat = document.getElementById('fCat').value;
+  var diff = document.getElementById('fDiff').value;
+  var dur = document.getElementById('fDur').value;
+  var tag = document.getElementById('fTag').value;
+  var src = document.getElementById('fSrc').value;
+  var q = document.getElementById('fQ').value.toLowerCase().trim();
 
-  const parts = [];
-  let shown = 0;
+  var grid = document.getElementById('grid');
+  grid.textContent = '';
+  var shown = 0;
 
-  COURSES.forEach(function(c){
+  COURSES.forEach(function (c) {
     if (cat !== 'all' && c.cat !== cat) return;
     if (diff !== 'all' && c.difficulty !== diff) return;
     if (src !== 'all' && c.source !== src) return;
-    const d = c.duration || 0;
+    var d = c.duration || 0;
     if (dur === 'short' && !(d > 0 && d < 20)) return;
     if (dur === 'medium' && !(d >= 20 && d <= 100)) return;
     if (dur === 'long' && !(d > 100)) return;
-    if (tag !== 'all' && !(c.tags || []).includes(tag)) return;
+    if (tag !== 'all' && (c.tags || []).indexOf(tag) === -1) return;
     if (q) {
-      const hay = (c.name + ' ' + (c.desc || '') + ' ' + (c.tags || []).join(' ')).toLowerCase();
+      var hay = (c.name + ' ' + (c.desc || '') + ' ' + (c.tags || []).join(' ')).toLowerCase();
       if (hay.indexOf(q) === -1) return;
     }
 
-    const durTxt = (c.duration >= 9999) ? 'ongoing' : (c.duration || '?') + 'h';
-    parts.push(
-      '<div class="card">' +
-        '<div class="card-header">' +
-          '<h3 class="card-title"><a href="' + esc(c.url) + '" target="_blank" rel="noopener">' + esc(c.name) +</a</h3>' +
-          '<span class="badge">' + esc(c.cat) +</span>' +
-       </div>' +
-        '<p class="card-desc">' + esc(c.desc || '') +</p>' +
-        '<div class="card-meta">' +
-          '<span>' + esc(c.difficulty || 'mixed') +</span>' +
-          '<span>' + durTxt +</span>' +
-          (c.source ? '<span>' + esc(c.source) +</span>' : '') +
-       </div>' +
-        '<a class="open-btn" href="' + esc(c.url) + '" target="_blank" rel="noopener">Buka Course</a>' +
-     </div>'
-    );
+    var card = el('div', 'card');
+
+    var top = el('div', 'card-top');
+    var h3 = el('h3', 'card-title');
+    var a = el('a', null, c.name);
+    a.href = c.url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    h3.appendChild(a);
+    top.appendChild(h3);
+    top.appendChild(el('span', 'badge', c.cat || ''));
+    card.appendChild(top);
+
+    card.appendChild(el('p', 'card-desc', c.desc || ''));
+
+    var meta = el('div', 'card-meta');
+    meta.appendChild(el('span', null, c.difficulty || 'mixed'));
+    meta.appendChild(el('span', null, (c.duration >= 9999) ? 'ongoing' : ((c.duration || '?') + 'h')));
+    if (c.source) meta.appendChild(el('span', null, c.source));
+    card.appendChild(meta);
+
+    var btn = el('a', 'open-btn', 'Buka Course');
+    btn.href = c.url;
+    btn.target = '_blank';
+    btn.rel = 'noopener';
+    card.appendChild(btn);
+
+    grid.appendChild(card);
     shown++;
   });
 
-  grid.innerHTML = shown ? parts.join('') : '<div class="empty">Tidak ada yang cocok dengan filter</div>';
-  document.getElementById('statTotal').textContent = COURSES.length;
-  document.getElementById('statShown').textContent = shown;
+  if (shown === 0) {
+    grid.appendChild(el('div', 'empty', 'Tidak ada yang cocok dengan filter'));
+  }
+  document.getElementById('count').textContent = 'Menampilkan ' + shown + ' dari ' + COURSES.length;
 }
 
-['categoryFilter','difficultyFilter','durationFilter','tagFilter','sourceFilter'].forEach(function(id){
+['fCat', 'fDiff', 'fDur', 'fTag', 'fSrc'].forEach(function (id) {
   document.getElementById(id).addEventListener('change', render);
 });
-document.getElementById('searchInput').addEventListener('input', render);
+document.getElementById('fQ').addEventListener('input', render);
 
-loadCourses();
+loadData();
 </script>
+
 </body>
 </html>

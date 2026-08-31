@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-08-31T10:17:21+00:00",
- "total": 159,
+ "updated_at": "2026-08-31T10:40:21+00:00",
+ "total": 160,
  "curated": 18,
- "from_feeds": 141,
+ "from_feeds": 142,
  "courses": [
   {
    "id": "deeplearning",
@@ -2183,6 +2183,20 @@
     "HN"
    ],
    "source": "HN Free Courses"
+  },
+  {
+   "id": "249333695e87",
+   "name": "How to Start Freelancing with No Experience",
+   "url": "https://dev.to/sinatra182/how-to-start-freelancing-with-no-experience-481e",
+   "cat": "Community",
+   "difficulty": "beginner",
+   "duration": 20,
+   "desc": "How to Start Freelancing with No Experience Introduction In 2026, earning money online is more accessible than ever. This guide covers real methods that pay — no fluff. Methods Tha",
+   "tags": [
+    "Tutorial",
+    "Beginner"
+   ],
+   "source": "dev.to Beginners"
   },
   {
    "id": "e5de924ddd14",
